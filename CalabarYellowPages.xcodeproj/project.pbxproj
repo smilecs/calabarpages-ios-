@@ -7,23 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F602D3BD1DE08CFC00AB0DD6 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F602D3BC1DE08CFC00AB0DD6 /* TableViewCell.swift */; };
+		F602D3BF1DE08D5900AB0DD6 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F602D3BE1DE08D5900AB0DD6 /* DataModel.swift */; };
+		F602D3C31DE08EDA00AB0DD6 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F602D3C21DE08EDA00AB0DD6 /* TableViewController.swift */; };
+		F602D3C51DE0C2AA00AB0DD6 /* PlusViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F602D3C41DE0C2AA00AB0DD6 /* PlusViewCell.swift */; };
+		F602D3C71DE0C38E00AB0DD6 /* PlusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F602D3C61DE0C38E00AB0DD6 /* PlusTableViewController.swift */; };
 		F677DB7C1DCF808800DD2A84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F677DB7B1DCF808800DD2A84 /* AppDelegate.swift */; };
-		F677DB7E1DCF808800DD2A84 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F677DB7D1DCF808800DD2A84 /* FirstViewController.swift */; };
-		F677DB801DCF808800DD2A84 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F677DB7F1DCF808800DD2A84 /* SecondViewController.swift */; };
 		F677DB831DCF808800DD2A84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F677DB811DCF808800DD2A84 /* Main.storyboard */; };
 		F677DB851DCF808800DD2A84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F677DB841DCF808800DD2A84 /* Assets.xcassets */; };
 		F677DB881DCF808800DD2A84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F677DB861DCF808800DD2A84 /* LaunchScreen.storyboard */; };
+		F6D2658F1DE36A360032DC64 /* CategoryListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2658E1DE36A360032DC64 /* CategoryListViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F602D3BC1DE08CFC00AB0DD6 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		F602D3BE1DE08D5900AB0DD6 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		F602D3C21DE08EDA00AB0DD6 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		F602D3C41DE0C2AA00AB0DD6 /* PlusViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlusViewCell.swift; sourceTree = "<group>"; };
+		F602D3C61DE0C38E00AB0DD6 /* PlusTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlusTableViewController.swift; sourceTree = "<group>"; };
 		F677DB781DCF808800DD2A84 /* CalabarYellowPages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalabarYellowPages.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F677DB7B1DCF808800DD2A84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F677DB7D1DCF808800DD2A84 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		F677DB7F1DCF808800DD2A84 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		F677DB821DCF808800DD2A84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F677DB841DCF808800DD2A84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F677DB871DCF808800DD2A84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F677DB891DCF808800DD2A84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6D2658E1DE36A360032DC64 /* CategoryListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryListViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +65,16 @@
 			isa = PBXGroup;
 			children = (
 				F677DB7B1DCF808800DD2A84 /* AppDelegate.swift */,
-				F677DB7D1DCF808800DD2A84 /* FirstViewController.swift */,
-				F677DB7F1DCF808800DD2A84 /* SecondViewController.swift */,
 				F677DB811DCF808800DD2A84 /* Main.storyboard */,
 				F677DB841DCF808800DD2A84 /* Assets.xcassets */,
 				F677DB861DCF808800DD2A84 /* LaunchScreen.storyboard */,
 				F677DB891DCF808800DD2A84 /* Info.plist */,
+				F602D3BC1DE08CFC00AB0DD6 /* TableViewCell.swift */,
+				F602D3BE1DE08D5900AB0DD6 /* DataModel.swift */,
+				F602D3C21DE08EDA00AB0DD6 /* TableViewController.swift */,
+				F602D3C41DE0C2AA00AB0DD6 /* PlusViewCell.swift */,
+				F602D3C61DE0C38E00AB0DD6 /* PlusTableViewController.swift */,
+				F6D2658E1DE36A360032DC64 /* CategoryListViewCell.swift */,
 			);
 			path = CalabarYellowPages;
 			sourceTree = "<group>";
@@ -139,9 +151,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F677DB801DCF808800DD2A84 /* SecondViewController.swift in Sources */,
+				F6D2658F1DE36A360032DC64 /* CategoryListViewCell.swift in Sources */,
 				F677DB7C1DCF808800DD2A84 /* AppDelegate.swift in Sources */,
-				F677DB7E1DCF808800DD2A84 /* FirstViewController.swift in Sources */,
+				F602D3C71DE0C38E00AB0DD6 /* PlusTableViewController.swift in Sources */,
+				F602D3BD1DE08CFC00AB0DD6 /* TableViewCell.swift in Sources */,
+				F602D3C51DE0C2AA00AB0DD6 /* PlusViewCell.swift in Sources */,
+				F602D3C31DE08EDA00AB0DD6 /* TableViewController.swift in Sources */,
+				F602D3BF1DE08D5900AB0DD6 /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +307,7 @@
 				F677DB8E1DCF808800DD2A84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
