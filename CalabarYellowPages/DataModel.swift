@@ -14,6 +14,7 @@ class DataModel{
     var WorkDays:String
     var Phone:String
     var Slug:String
+    var Type:String
     var Image, Specialisation:String
     var Description:String
     init(){
@@ -25,6 +26,7 @@ class DataModel{
         self.Title = ""
         self.WorkDays = ""
         self.Slug = ""
+        self.Type = ""
     }
 }
 

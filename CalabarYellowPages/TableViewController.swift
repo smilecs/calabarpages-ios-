@@ -46,6 +46,14 @@ class TableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let dataToPass = TableData[indexPath.row]
+        let categoryList:CategoryListController = self.storyboard?.instantiateViewControllerWithIdentifier("CategoryList") as! CategoryListController
+        categoryList.slug = dataToPass.Slug
+        categoryList.categoryName = dataToPass.Title
+        self.presentViewController(categoryList, animated: true, completion: nil)
+    }
+    
     func get_data(url:String)
     {
         let url = NSURL(string: url)
