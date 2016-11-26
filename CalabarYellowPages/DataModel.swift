@@ -15,9 +15,13 @@ class DataModel{
     var Phone:String
     var Slug:String
     var Type:String
+    var ImageAray:[String]
+    var Web:String
     var Image, Specialisation:String
     var Description:String
     init(){
+        self.Web = ""
+        self.ImageAray = []
         self.Address = ""
         self.Description = ""
         self.Image = ""

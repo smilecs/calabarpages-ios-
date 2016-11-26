@@ -17,6 +17,8 @@ class CategoryListViewCell: UITableViewCell {
     @IBOutlet weak var Phone: UILabel!
     @IBOutlet weak var Specialisation: UILabel!
     @IBOutlet weak var Advert: UIImageView!
+    @IBOutlet weak var logo: UIImageView!
+   
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

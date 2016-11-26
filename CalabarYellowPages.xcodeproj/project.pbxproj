@@ -18,6 +18,8 @@
 		F677DB881DCF808800DD2A84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F677DB861DCF808800DD2A84 /* LaunchScreen.storyboard */; };
 		F6D2658F1DE36A360032DC64 /* CategoryListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2658E1DE36A360032DC64 /* CategoryListViewCell.swift */; };
 		F6D265911DE36BCC0032DC64 /* CategoryListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D265901DE36BCC0032DC64 /* CategoryListController.swift */; };
+		F6E827611DE7AE5F004845B6 /* PlusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E827601DE7AE5F004845B6 /* PlusViewController.swift */; };
+		F6E827651DE86160004845B6 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E827641DE86160004845B6 /* GalleryCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		F677DB891DCF808800DD2A84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6D2658E1DE36A360032DC64 /* CategoryListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryListViewCell.swift; sourceTree = "<group>"; };
 		F6D265901DE36BCC0032DC64 /* CategoryListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryListController.swift; sourceTree = "<group>"; };
+		F6E827601DE7AE5F004845B6 /* PlusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlusViewController.swift; sourceTree = "<group>"; };
+		F6E827641DE86160004845B6 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GalleryCollectionViewCell.swift; path = Assets.xcassets/AppIcon.appiconset/GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,8 @@
 				F602D3C61DE0C38E00AB0DD6 /* PlusTableViewController.swift */,
 				F6D2658E1DE36A360032DC64 /* CategoryListViewCell.swift */,
 				F6D265901DE36BCC0032DC64 /* CategoryListController.swift */,
+				F6E827601DE7AE5F004845B6 /* PlusViewController.swift */,
+				F6E827641DE86160004845B6 /* GalleryCollectionViewCell.swift */,
 			);
 			path = CalabarYellowPages;
 			sourceTree = "<group>";
@@ -155,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6D2658F1DE36A360032DC64 /* CategoryListViewCell.swift in Sources */,
+				F6E827651DE86160004845B6 /* GalleryCollectionViewCell.swift in Sources */,
 				F677DB7C1DCF808800DD2A84 /* AppDelegate.swift in Sources */,
 				F602D3C71DE0C38E00AB0DD6 /* PlusTableViewController.swift in Sources */,
 				F602D3BD1DE08CFC00AB0DD6 /* TableViewCell.swift in Sources */,
@@ -162,6 +169,7 @@
 				F6D265911DE36BCC0032DC64 /* CategoryListController.swift in Sources */,
 				F602D3C31DE08EDA00AB0DD6 /* TableViewController.swift in Sources */,
 				F602D3BF1DE08D5900AB0DD6 /* DataModel.swift in Sources */,
+				F6E827611DE7AE5F004845B6 /* PlusViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

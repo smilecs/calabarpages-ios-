@@ -10,11 +10,14 @@ import UIKit
 
 class PlusViewCell: UITableViewCell {
 
+    @IBOutlet weak var plusLogo: UIImageView!
     @IBOutlet weak var title: UILabel!
-    @IBOutlet weak var address: UILabel!
+    @IBOutlet weak var Address: UILabel!
     @IBOutlet weak var workDays: UILabel!
-    @IBOutlet weak var phone: UILabel!
-    @IBOutlet weak var specialisation: UILabel!
+    @IBOutlet weak var Phone: UILabel!
+    @IBOutlet weak var special: UILabel!
+   
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     
