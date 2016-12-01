@@ -8,14 +8,16 @@
 
 import UIKit
 
-class PlusTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class PlusTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     var TableData:Array<DataModel> = Array<DataModel>()
-
+    
+    @IBOutlet weak var searchbar: UISearchBar!
     @IBOutlet weak var table: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.table.delegate = self
         self.table.dataSource = self
+        self.searchbar.delegate = self
         get_data("https://calabaryellowpages.herokuapp.com/api/falseview?page=1")
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -38,20 +40,46 @@ class PlusTableViewController: UIViewController, UITableViewDelegate, UITableVie
 
      func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+       
         return TableData.count
     }
+    
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        
+    }
+    
+    func searchBarTextDidEndEditing(searchBar: UISearchBar) {
+        
+    }
+    
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+       
+        
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+         let categoryList:SearchViewController = self.storyboard?.instantiateViewControllerWithIdentifier("searchResult") as! SearchViewController
+        categoryList.QueryString = searchBar.text!
+        dispatch_async(dispatch_get_main_queue(), {() -> Void in
+                 self.presentViewController(categoryList, animated: true, completion: nil)
+            })
+    }
+    
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        
+           }
 
     
      func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! PlusViewCell
-        let item = TableData[indexPath.row]
-        cell.title?.text = item.Title
-        cell.Address?.text = item.Address
-        cell.special?.text = item.Specialisation
-        cell.workDays?.text = item.WorkDays
-        cell.Phone?.text = item.Phone
-        if let url = NSURL(string: item.Image), datas = NSData(contentsOfURL: url){
-            cell.plusLogo.image = UIImage(data: datas)
+            let item = TableData[indexPath.row]
+            cell.title?.text = item.Title
+            cell.Address?.text = item.Address
+            cell.special?.text = item.Specialisation
+            cell.workDays?.text = item.WorkDays
+            cell.Phone?.text = item.Phone
+            if let url = NSURL(string: item.Image), datas = NSData(contentsOfURL: url){
+                cell.plusLogo.image = UIImage(data: datas)
             
         }
         return cell
@@ -59,6 +87,7 @@ class PlusTableViewController: UIViewController, UITableViewDelegate, UITableVie
     
      func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let dataToPass = TableData[indexPath.row]
+        if(dataToPass.Type == "true"){
             let categoryList:PlusViewController = self.storyboard?.instantiateViewControllerWithIdentifier("plusDetailView") as! PlusViewController
             categoryList.Address = dataToPass.Address
             categoryList.titleM = dataToPass.Title
@@ -69,7 +98,11 @@ class PlusTableViewController: UIViewController, UITableViewDelegate, UITableVie
             categoryList.special = dataToPass.Specialisation
             categoryList.web = dataToPass.Web
             categoryList.logo = dataToPass.Image
-            self.presentViewController(categoryList, animated: true, completion: nil)
+            dispatch_async(dispatch_get_main_queue(), {() -> Void in
+                self.presentViewController(categoryList, animated: true, completion: nil)
+            })
+
+        }
         
     }
 
@@ -105,18 +138,22 @@ class PlusTableViewController: UIViewController, UITableViewDelegate, UITableVie
                 for item in data{
                     let tm = item as! NSDictionary
                     let dataModel:DataModel = DataModel()
-                    dataModel.Title = tm["CompanyName"] as! String
-                    dataModel.Slug = tm["Slug"]as! String
-                    dataModel.Phone = tm["Hotline"] as! String
-                    dataModel.Address = tm["Address"] as! String
-                    dataModel.Specialisation = tm["Specialisation"] as! String
-                    dataModel.Description = tm["About"] as! String
-                    dataModel.WorkDays = tm["Dhr"] as! String
-                    dataModel.Image = tm["Image"] as! String
-                    for itms in tm["Images"] as! NSArray{
+                    dataModel.Title = (tm["CompanyName"] as! String?)!
+                    dataModel.Slug = (tm["Slug"]as! String?)!
+                    dataModel.Phone = (tm["Hotline"] as! String?)!
+                    dataModel.Address = (tm["Address"] as! String?)!
+                    dataModel.Specialisation = (tm["Specialisation"] as! String?)!
+                    dataModel.Description = (tm["About"] as! String?)!
+                    dataModel.WorkDays = (tm["Dhr"] as! String?)!
+                    dataModel.Image = (tm["Image"] as! String?)!
+                    for itms in (tm["Images"] as! NSArray?)!
+                    
+                    
+                    {
                         dataModel.ImageAray.append(itms as! String)
                     }
                     self.TableData.append(dataModel)
+                    
                     
                 }
                 dispatch_async(dispatch_get_main_queue(), {() -> Void in

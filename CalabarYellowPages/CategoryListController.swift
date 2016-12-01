@@ -8,16 +8,25 @@
 
 import UIKit
 
-class CategoryListController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class CategoryListController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     @IBOutlet weak var Tableview: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     var slug = ""
     var categoryName = ""
     var page:Int = 1
+    var indicator = UIActivityIndicatorView()
     var TableData:Array<DataModel> = Array<DataModel>()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.Tableview.delegate = self
         self.Tableview.dataSource = self
+        self.searchBar.delegate = self
+        indicator = UIActivityIndicatorView(frame: CGRectMake(0, 0, 40, 40))
+        indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+        indicator.center = self.view.center
+        self.view.addSubview(indicator)
+        indicator.startAnimating()
+        indicator.backgroundColor = UIColor.whiteColor()
         //api/newview?page=" + page + "&q=
         get_data("https://calabaryellowpages.herokuapp.com/api/newview?page=1&q="+slug)
         // Uncomment the following line to preserve selection between presentations
@@ -30,6 +39,31 @@ class CategoryListController: UIViewController, UITableViewDelegate, UITableView
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        
+    }
+    
+    func searchBarTextDidEndEditing(searchBar: UISearchBar) {
+        
+    }
+    
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        
+        
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        let categoryList:SearchViewController = self.storyboard?.instantiateViewControllerWithIdentifier("searchResult") as! SearchViewController
+        categoryList.QueryString = searchBar.text!
+        dispatch_async(dispatch_get_main_queue(), {() -> Void in
+            self.presentViewController(categoryList, animated: true, completion: nil)
+        })
+    }
+    
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        
     }
 
     // MARK: - Table view data source
@@ -142,6 +176,8 @@ class CategoryListController: UIViewController, UITableViewDelegate, UITableView
                     
                 }
                 dispatch_async(dispatch_get_main_queue(), {() -> Void in
+                    self.indicator.stopAnimating()
+                    self.indicator.hidesWhenStopped = true
                     self.Tableview.reloadData()
                 })
                 

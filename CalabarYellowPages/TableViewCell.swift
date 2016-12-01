@@ -10,6 +10,13 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
 
+    
+    @IBOutlet weak var SearchSpecialisation: UILabel!
+    @IBOutlet weak var SearchPhone: UILabel!
+    @IBOutlet weak var SearchWorkDay: UILabel!
+    @IBOutlet weak var SearchAddress: UILabel!
+    @IBOutlet weak var SearchLogo: UIImageView!
+    @IBOutlet weak var SearchTitle: UILabel!
     @IBOutlet weak var label: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
