@@ -13,6 +13,7 @@ class PlusTableViewController: UIViewController, UITableViewDelegate, UITableVie
     
     @IBOutlet weak var searchbar: UISearchBar!
     @IBOutlet weak var table: UITableView!
+    var page:Int = 1
     override func viewDidLoad() {
         super.viewDidLoad()
         self.table.delegate = self
@@ -42,6 +43,15 @@ class PlusTableViewController: UIViewController, UITableViewDelegate, UITableVie
         // #warning Incomplete implementation, return the number of rows
        
         return TableData.count
+    }
+    
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        let lastElement = TableData.count - 1
+        if indexPath.row == lastElement {
+            page += 1
+            let string = String(page)
+            get_data("https://calabaryellowpages.herokuapp.com/api/falseview?page="+string)
+        }
     }
     
     func searchBarTextDidBeginEditing(searchBar: UISearchBar) {

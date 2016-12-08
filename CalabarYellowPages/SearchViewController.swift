@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var back: UIBarButtonItem!
     @IBOutlet weak var navBar: UINavigationItem!
@@ -17,8 +18,10 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     var TableData:Array<DataModel> = Array<DataModel>()
+    var page:Int = 1
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = QueryString
         self.navBar.backBarButtonItem = back
         self.navBar.leftBarButtonItem = back
         self.navBar.leftItemsSupplementBackButton = true
@@ -40,6 +43,15 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        let lastElement = TableData.count - 1
+        if indexPath.row == lastElement {
+            page += 1
+            let string = String(page)
+            get_data("https://calabaryellowpages.herokuapp.com/api/result?page="+string+"&q=" + QueryString)
+        }
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -66,6 +78,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
     }
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        QueryString = searchBar.text!
         get_data("https://calabaryellowpages.herokuapp.com/api/result?page=1&q=" + searchBar.text!)
         
     }

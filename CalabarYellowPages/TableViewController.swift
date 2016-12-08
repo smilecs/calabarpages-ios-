@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class TableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     var TableData:Array<DataModel> = Array<DataModel>()
 
@@ -17,6 +18,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     var Searchfilter:Array<DataModel> = Array<DataModel>()
         override func viewDidLoad() {
         super.viewDidLoad()
+        
         get_data("https://calabaryellowpages.herokuapp.com/api/getcat")
         self.tableView.delegate = self
         self.tableView.dataSource = self

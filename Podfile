@@ -7,7 +7,6 @@ target 'CalabarYellowPages' do
 
 
   # Pods for CalabarYellowPages
-pod 'RKCardView'
-pod 'Material', '~> 2.0'
+pod 'Firebase/Auth'
 
 end

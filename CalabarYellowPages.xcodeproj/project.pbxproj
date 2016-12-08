@@ -19,6 +19,18 @@
 		F677DB881DCF808800DD2A84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F677DB861DCF808800DD2A84 /* LaunchScreen.storyboard */; };
 		F6D2658F1DE36A360032DC64 /* CategoryListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2658E1DE36A360032DC64 /* CategoryListViewCell.swift */; };
 		F6D265911DE36BCC0032DC64 /* CategoryListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D265901DE36BCC0032DC64 /* CategoryListController.swift */; };
+		F6DE6E261DF4CC7A002D20D2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F6DE6E251DF4CC7A002D20D2 /* GoogleService-Info.plist */; };
+		F6DE6E481DF4D7B6002D20D2 /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6DE6E421DF4D7B6002D20D2 /* FirebaseAnalytics.framework */; };
+		F6DE6E491DF4D7B6002D20D2 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6DE6E431DF4D7B6002D20D2 /* FirebaseCore.framework */; };
+		F6DE6E4A1DF4D7B6002D20D2 /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6DE6E441DF4D7B6002D20D2 /* FirebaseInstanceID.framework */; };
+		F6DE6E4B1DF4D7B6002D20D2 /* GoogleInterchangeUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6DE6E451DF4D7B6002D20D2 /* GoogleInterchangeUtilities.framework */; };
+		F6DE6E4C1DF4D7B6002D20D2 /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6DE6E461DF4D7B6002D20D2 /* GoogleSymbolUtilities.framework */; };
+		F6DE6E4D1DF4D7B6002D20D2 /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6DE6E471DF4D7B6002D20D2 /* GoogleToolboxForMac.framework */; };
+		F6DE6E4F1DF4D85A002D20D2 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F6DE6E4E1DF4D85A002D20D2 /* libicucore.tbd */; };
+		F6DE6E5A1DF4DBAF002D20D2 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F6DE6E591DF4DBAF002D20D2 /* libc++.tbd */; };
+		F6DE6E5C1DF4DBC7002D20D2 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6DE6E5B1DF4DBC6002D20D2 /* CFNetwork.framework */; };
+		F6DE6E5E1DF4DBD4002D20D2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6DE6E5D1DF4DBD4002D20D2 /* Security.framework */; };
+		F6DE6E601DF4DBEB002D20D2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6DE6E5F1DF4DBEB002D20D2 /* SystemConfiguration.framework */; };
 		F6E827611DE7AE5F004845B6 /* PlusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E827601DE7AE5F004845B6 /* PlusViewController.swift */; };
 		F6E827651DE86160004845B6 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E827641DE86160004845B6 /* GalleryCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -38,6 +50,21 @@
 		F677DB891DCF808800DD2A84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6D2658E1DE36A360032DC64 /* CategoryListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryListViewCell.swift; sourceTree = "<group>"; };
 		F6D265901DE36BCC0032DC64 /* CategoryListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryListController.swift; sourceTree = "<group>"; };
+		F6DE6E251DF4CC7A002D20D2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F6DE6E421DF4D7B6002D20D2 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		F6DE6E431DF4D7B6002D20D2 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = "<group>"; };
+		F6DE6E441DF4D7B6002D20D2 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		F6DE6E451DF4D7B6002D20D2 /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
+		F6DE6E461DF4D7B6002D20D2 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
+		F6DE6E471DF4D7B6002D20D2 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleToolboxForMac.framework; sourceTree = "<group>"; };
+		F6DE6E4E1DF4D85A002D20D2 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		F6DE6E501DF4D895002D20D2 /* Firebase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = ../../../Downloads/Firebase/Firebase.h; sourceTree = "<group>"; };
+		F6DE6E511DF4D895002D20D2 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = ../../Downloads/Firebase/module.modulemap; sourceTree = "<group>"; };
+		F6DE6E561DF4DA74002D20D2 /* CalabarYellowPages-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CalabarYellowPages-Bridging-Header.h"; sourceTree = "<group>"; };
+		F6DE6E591DF4DBAF002D20D2 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		F6DE6E5B1DF4DBC6002D20D2 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		F6DE6E5D1DF4DBD4002D20D2 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		F6DE6E5F1DF4DBEB002D20D2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F6E827601DE7AE5F004845B6 /* PlusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlusViewController.swift; sourceTree = "<group>"; };
 		F6E827641DE86160004845B6 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GalleryCollectionViewCell.swift; path = Assets.xcassets/AppIcon.appiconset/GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -47,6 +74,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6DE6E601DF4DBEB002D20D2 /* SystemConfiguration.framework in Frameworks */,
+				F6DE6E5E1DF4DBD4002D20D2 /* Security.framework in Frameworks */,
+				F6DE6E5C1DF4DBC7002D20D2 /* CFNetwork.framework in Frameworks */,
+				F6DE6E5A1DF4DBAF002D20D2 /* libc++.tbd in Frameworks */,
+				F6DE6E4F1DF4D85A002D20D2 /* libicucore.tbd in Frameworks */,
+				F6DE6E491DF4D7B6002D20D2 /* FirebaseCore.framework in Frameworks */,
+				F6DE6E4B1DF4D7B6002D20D2 /* GoogleInterchangeUtilities.framework in Frameworks */,
+				F6DE6E4C1DF4D7B6002D20D2 /* GoogleSymbolUtilities.framework in Frameworks */,
+				F6DE6E4D1DF4D7B6002D20D2 /* GoogleToolboxForMac.framework in Frameworks */,
+				F6DE6E4A1DF4D7B6002D20D2 /* FirebaseInstanceID.framework in Frameworks */,
+				F6DE6E481DF4D7B6002D20D2 /* FirebaseAnalytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +94,19 @@
 		F677DB6F1DCF808800DD2A84 = {
 			isa = PBXGroup;
 			children = (
+				F6DE6E5F1DF4DBEB002D20D2 /* SystemConfiguration.framework */,
+				F6DE6E5D1DF4DBD4002D20D2 /* Security.framework */,
+				F6DE6E5B1DF4DBC6002D20D2 /* CFNetwork.framework */,
+				F6DE6E591DF4DBAF002D20D2 /* libc++.tbd */,
+				F6DE6E511DF4D895002D20D2 /* module.modulemap */,
+				F6DE6E4E1DF4D85A002D20D2 /* libicucore.tbd */,
+				F6DE6E421DF4D7B6002D20D2 /* FirebaseAnalytics.framework */,
+				F6DE6E431DF4D7B6002D20D2 /* FirebaseCore.framework */,
+				F6DE6E441DF4D7B6002D20D2 /* FirebaseInstanceID.framework */,
+				F6DE6E451DF4D7B6002D20D2 /* GoogleInterchangeUtilities.framework */,
+				F6DE6E461DF4D7B6002D20D2 /* GoogleSymbolUtilities.framework */,
+				F6DE6E471DF4D7B6002D20D2 /* GoogleToolboxForMac.framework */,
+				F6DE6E1F1DF4C8E7002D20D2 /* firebaseAnalytics */,
 				F677DB7A1DCF808800DD2A84 /* CalabarYellowPages */,
 				F677DB791DCF808800DD2A84 /* Products */,
 			);
@@ -72,6 +123,8 @@
 		F677DB7A1DCF808800DD2A84 /* CalabarYellowPages */ = {
 			isa = PBXGroup;
 			children = (
+				F6DE6E501DF4D895002D20D2 /* Firebase.h */,
+				F6DE6E251DF4CC7A002D20D2 /* GoogleService-Info.plist */,
 				F677DB7B1DCF808800DD2A84 /* AppDelegate.swift */,
 				F677DB811DCF808800DD2A84 /* Main.storyboard */,
 				F677DB841DCF808800DD2A84 /* Assets.xcassets */,
@@ -87,8 +140,16 @@
 				F6E827601DE7AE5F004845B6 /* PlusViewController.swift */,
 				F6E827641DE86160004845B6 /* GalleryCollectionViewCell.swift */,
 				F64228F31DEECBB000AA870A /* SearchViewController.swift */,
+				F6DE6E561DF4DA74002D20D2 /* CalabarYellowPages-Bridging-Header.h */,
 			);
 			path = CalabarYellowPages;
+			sourceTree = "<group>";
+		};
+		F6DE6E1F1DF4C8E7002D20D2 /* firebaseAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = firebaseAnalytics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F677DB881DCF808800DD2A84 /* LaunchScreen.storyboard in Resources */,
+				F6DE6E261DF4CC7A002D20D2 /* GoogleService-Info.plist in Resources */,
 				F677DB851DCF808800DD2A84 /* Assets.xcassets in Resources */,
 				F677DB831DCF808800DD2A84 /* Main.storyboard in Resources */,
 			);
@@ -286,10 +348,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/CalabarYellowPages",
+				);
 				INFOPLIST_FILE = CalabarYellowPages/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.calabarpages.CalabarYellowPages;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CalabarYellowPages/CalabarYellowPages-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -297,10 +368,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/CalabarYellowPages",
+				);
 				INFOPLIST_FILE = CalabarYellowPages/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.calabarpages.CalabarYellowPages;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CalabarYellowPages/CalabarYellowPages-Bridging-Header.h";
 			};
 			name = Release;
 		};
