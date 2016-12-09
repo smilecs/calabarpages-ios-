@@ -25,6 +25,8 @@
 		F6CBE77E1DFA9CAC003B5DAC /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CBE77A1DFA9CAC003B5DAC /* FBSDKCoreKit.framework */; };
 		F6CBE77F1DFA9CAC003B5DAC /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CBE77B1DFA9CAC003B5DAC /* FBSDKLoginKit.framework */; };
 		F6CBE7801DFA9CAC003B5DAC /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CBE77C1DFA9CAC003B5DAC /* FBSDKShareKit.framework */; };
+		F6CBE7821DFADED1003B5DAC /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CBE7811DFADED1003B5DAC /* GoogleMobileAds.framework */; };
+		F6CBE7841DFAEC40003B5DAC /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CBE7831DFAEC40003B5DAC /* CollectionViewCell.swift */; };
 		F6D2658F1DE36A360032DC64 /* CategoryListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2658E1DE36A360032DC64 /* CategoryListViewCell.swift */; };
 		F6D265911DE36BCC0032DC64 /* CategoryListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D265901DE36BCC0032DC64 /* CategoryListController.swift */; };
 		F6DE6E261DF4CC7A002D20D2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F6DE6E251DF4CC7A002D20D2 /* GoogleService-Info.plist */; };
@@ -40,7 +42,6 @@
 		F6DE6E5E1DF4DBD4002D20D2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6DE6E5D1DF4DBD4002D20D2 /* Security.framework */; };
 		F6DE6E601DF4DBEB002D20D2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6DE6E5F1DF4DBEB002D20D2 /* SystemConfiguration.framework */; };
 		F6E827611DE7AE5F004845B6 /* PlusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E827601DE7AE5F004845B6 /* PlusViewController.swift */; };
-		F6E827651DE86160004845B6 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E827641DE86160004845B6 /* GalleryCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,8 @@
 		F6CBE77A1DFA9CAC003B5DAC /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		F6CBE77B1DFA9CAC003B5DAC /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		F6CBE77C1DFA9CAC003B5DAC /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		F6CBE7811DFADED1003B5DAC /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		F6CBE7831DFAEC40003B5DAC /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionViewCell.swift; path = ../CollectionViewCell.swift; sourceTree = "<group>"; };
 		F6D2658E1DE36A360032DC64 /* CategoryListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryListViewCell.swift; sourceTree = "<group>"; };
 		F6D265901DE36BCC0032DC64 /* CategoryListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryListController.swift; sourceTree = "<group>"; };
 		F6DE6E251DF4CC7A002D20D2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -82,7 +85,6 @@
 		F6DE6E5D1DF4DBD4002D20D2 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		F6DE6E5F1DF4DBEB002D20D2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F6E827601DE7AE5F004845B6 /* PlusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlusViewController.swift; sourceTree = "<group>"; };
-		F6E827641DE86160004845B6 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GalleryCollectionViewCell.swift; path = Assets.xcassets/AppIcon.appiconset/GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6CBE7821DFADED1003B5DAC /* GoogleMobileAds.framework in Frameworks */,
 				F6DE6E601DF4DBEB002D20D2 /* SystemConfiguration.framework in Frameworks */,
 				F6DE6E5E1DF4DBD4002D20D2 /* Security.framework in Frameworks */,
 				F6CBE7801DFA9CAC003B5DAC /* FBSDKShareKit.framework in Frameworks */,
@@ -116,6 +119,7 @@
 		F677DB6F1DCF808800DD2A84 = {
 			isa = PBXGroup;
 			children = (
+				F6CBE7811DFADED1003B5DAC /* GoogleMobileAds.framework */,
 				F6CBE7791DFA9CAC003B5DAC /* Bolts.framework */,
 				F6CBE77A1DFA9CAC003B5DAC /* FBSDKCoreKit.framework */,
 				F6CBE77B1DFA9CAC003B5DAC /* FBSDKLoginKit.framework */,
@@ -151,6 +155,7 @@
 		F677DB7A1DCF808800DD2A84 /* CalabarYellowPages */ = {
 			isa = PBXGroup;
 			children = (
+				F6CBE7831DFAEC40003B5DAC /* CollectionViewCell.swift */,
 				F6DE6E501DF4D895002D20D2 /* Firebase.h */,
 				F6DE6E251DF4CC7A002D20D2 /* GoogleService-Info.plist */,
 				F677DB7B1DCF808800DD2A84 /* AppDelegate.swift */,
@@ -166,7 +171,6 @@
 				F6D2658E1DE36A360032DC64 /* CategoryListViewCell.swift */,
 				F6D265901DE36BCC0032DC64 /* CategoryListController.swift */,
 				F6E827601DE7AE5F004845B6 /* PlusViewController.swift */,
-				F6E827641DE86160004845B6 /* GalleryCollectionViewCell.swift */,
 				F64228F31DEECBB000AA870A /* SearchViewController.swift */,
 				F6DE6E561DF4DA74002D20D2 /* CalabarYellowPages-Bridging-Header.h */,
 				F6CBE7561DF9DD77003B5DAC /* Login.swift */,
@@ -257,13 +261,13 @@
 			files = (
 				F6D2658F1DE36A360032DC64 /* CategoryListViewCell.swift in Sources */,
 				F64228F41DEECBB000AA870A /* SearchViewController.swift in Sources */,
-				F6E827651DE86160004845B6 /* GalleryCollectionViewCell.swift in Sources */,
 				F6CBE7571DF9DD77003B5DAC /* Login.swift in Sources */,
 				F677DB7C1DCF808800DD2A84 /* AppDelegate.swift in Sources */,
 				F602D3C71DE0C38E00AB0DD6 /* PlusTableViewController.swift in Sources */,
 				F602D3BD1DE08CFC00AB0DD6 /* TableViewCell.swift in Sources */,
 				F602D3C51DE0C2AA00AB0DD6 /* PlusViewCell.swift in Sources */,
 				F6D265911DE36BCC0032DC64 /* CategoryListController.swift in Sources */,
+				F6CBE7841DFAEC40003B5DAC /* CollectionViewCell.swift in Sources */,
 				F6CBE7591DF9DDED003B5DAC /* TabBar.swift in Sources */,
 				F602D3C31DE08EDA00AB0DD6 /* TableViewController.swift in Sources */,
 				F602D3BF1DE08D5900AB0DD6 /* DataModel.swift in Sources */,
@@ -380,6 +384,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -401,6 +406,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

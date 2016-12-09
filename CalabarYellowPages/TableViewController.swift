@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 
 class TableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     var TableData:Array<DataModel> = Array<DataModel>()
 
+    @IBOutlet weak var admob: GADBannerView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     var indicator = UIActivityIndicatorView()
@@ -20,6 +22,9 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         super.viewDidLoad()
         
         get_data("https://calabaryellowpages.herokuapp.com/api/getcat")
+        admob.adUnitID = "ca-app-pub-9472469694308804/9770170177"
+        admob.rootViewController = self
+        admob.loadRequest(GADRequest())
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.searchBar.delegate = self

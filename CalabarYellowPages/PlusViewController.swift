@@ -64,9 +64,9 @@ class PlusViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let data = ImageAray[indexPath.row]
-        let cell:GalleryCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! GalleryCollectionViewCell
+        let cell:CollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! CollectionViewCell
         if let url = NSURL(string: data), datas = NSData(contentsOfURL: url){
-            cell.GalleryImage?.image = UIImage(data: datas)
+            cell.gallery?.image = UIImage(data: datas)
             
         }
         return cell
