@@ -79,6 +79,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         QueryString = searchBar.text!
+        indicator.startAnimating()
         get_data("https://calabaryellowpages.herokuapp.com/api/result?page=1&q=" + searchBar.text!)
         
     }
@@ -140,7 +141,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
     {
         let url = NSURL(string: url)
         let urlRequest = NSMutableURLRequest(URL: url!)
-        urlRequest.HTTPMethod = "GET"
+        urlRequest.HTTPMethod = "POST"
         let task = NSURLSession.sharedSession().dataTaskWithRequest(urlRequest){
             data, response, error in
             if error != nil

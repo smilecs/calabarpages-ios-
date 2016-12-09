@@ -17,6 +17,14 @@
 		F677DB831DCF808800DD2A84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F677DB811DCF808800DD2A84 /* Main.storyboard */; };
 		F677DB851DCF808800DD2A84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F677DB841DCF808800DD2A84 /* Assets.xcassets */; };
 		F677DB881DCF808800DD2A84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F677DB861DCF808800DD2A84 /* LaunchScreen.storyboard */; };
+		F6CBE7571DF9DD77003B5DAC /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CBE7561DF9DD77003B5DAC /* Login.swift */; };
+		F6CBE7591DF9DDED003B5DAC /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CBE7581DF9DDED003B5DAC /* TabBar.swift */; };
+		F6CBE7761DFA02E2003B5DAC /* FirebaseAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CBE7751DFA02E2003B5DAC /* FirebaseAuth.framework */; };
+		F6CBE7781DFA04C0003B5DAC /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CBE7771DFA04C0003B5DAC /* GTMSessionFetcher.framework */; };
+		F6CBE77D1DFA9CAC003B5DAC /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CBE7791DFA9CAC003B5DAC /* Bolts.framework */; };
+		F6CBE77E1DFA9CAC003B5DAC /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CBE77A1DFA9CAC003B5DAC /* FBSDKCoreKit.framework */; };
+		F6CBE77F1DFA9CAC003B5DAC /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CBE77B1DFA9CAC003B5DAC /* FBSDKLoginKit.framework */; };
+		F6CBE7801DFA9CAC003B5DAC /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CBE77C1DFA9CAC003B5DAC /* FBSDKShareKit.framework */; };
 		F6D2658F1DE36A360032DC64 /* CategoryListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2658E1DE36A360032DC64 /* CategoryListViewCell.swift */; };
 		F6D265911DE36BCC0032DC64 /* CategoryListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D265901DE36BCC0032DC64 /* CategoryListController.swift */; };
 		F6DE6E261DF4CC7A002D20D2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F6DE6E251DF4CC7A002D20D2 /* GoogleService-Info.plist */; };
@@ -48,6 +56,14 @@
 		F677DB841DCF808800DD2A84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F677DB871DCF808800DD2A84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F677DB891DCF808800DD2A84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6CBE7561DF9DD77003B5DAC /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		F6CBE7581DF9DDED003B5DAC /* TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		F6CBE7751DFA02E2003B5DAC /* FirebaseAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseAuth.framework; sourceTree = "<group>"; };
+		F6CBE7771DFA04C0003B5DAC /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GTMSessionFetcher.framework; sourceTree = "<group>"; };
+		F6CBE7791DFA9CAC003B5DAC /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		F6CBE77A1DFA9CAC003B5DAC /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		F6CBE77B1DFA9CAC003B5DAC /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		F6CBE77C1DFA9CAC003B5DAC /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		F6D2658E1DE36A360032DC64 /* CategoryListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryListViewCell.swift; sourceTree = "<group>"; };
 		F6D265901DE36BCC0032DC64 /* CategoryListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryListController.swift; sourceTree = "<group>"; };
 		F6DE6E251DF4CC7A002D20D2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -76,15 +92,21 @@
 			files = (
 				F6DE6E601DF4DBEB002D20D2 /* SystemConfiguration.framework in Frameworks */,
 				F6DE6E5E1DF4DBD4002D20D2 /* Security.framework in Frameworks */,
+				F6CBE7801DFA9CAC003B5DAC /* FBSDKShareKit.framework in Frameworks */,
 				F6DE6E5C1DF4DBC7002D20D2 /* CFNetwork.framework in Frameworks */,
+				F6CBE7781DFA04C0003B5DAC /* GTMSessionFetcher.framework in Frameworks */,
 				F6DE6E5A1DF4DBAF002D20D2 /* libc++.tbd in Frameworks */,
 				F6DE6E4F1DF4D85A002D20D2 /* libicucore.tbd in Frameworks */,
 				F6DE6E491DF4D7B6002D20D2 /* FirebaseCore.framework in Frameworks */,
 				F6DE6E4B1DF4D7B6002D20D2 /* GoogleInterchangeUtilities.framework in Frameworks */,
 				F6DE6E4C1DF4D7B6002D20D2 /* GoogleSymbolUtilities.framework in Frameworks */,
 				F6DE6E4D1DF4D7B6002D20D2 /* GoogleToolboxForMac.framework in Frameworks */,
+				F6CBE77E1DFA9CAC003B5DAC /* FBSDKCoreKit.framework in Frameworks */,
+				F6CBE7761DFA02E2003B5DAC /* FirebaseAuth.framework in Frameworks */,
 				F6DE6E4A1DF4D7B6002D20D2 /* FirebaseInstanceID.framework in Frameworks */,
 				F6DE6E481DF4D7B6002D20D2 /* FirebaseAnalytics.framework in Frameworks */,
+				F6CBE77F1DFA9CAC003B5DAC /* FBSDKLoginKit.framework in Frameworks */,
+				F6CBE77D1DFA9CAC003B5DAC /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +116,12 @@
 		F677DB6F1DCF808800DD2A84 = {
 			isa = PBXGroup;
 			children = (
+				F6CBE7791DFA9CAC003B5DAC /* Bolts.framework */,
+				F6CBE77A1DFA9CAC003B5DAC /* FBSDKCoreKit.framework */,
+				F6CBE77B1DFA9CAC003B5DAC /* FBSDKLoginKit.framework */,
+				F6CBE77C1DFA9CAC003B5DAC /* FBSDKShareKit.framework */,
+				F6CBE7771DFA04C0003B5DAC /* GTMSessionFetcher.framework */,
+				F6CBE7751DFA02E2003B5DAC /* FirebaseAuth.framework */,
 				F6DE6E5F1DF4DBEB002D20D2 /* SystemConfiguration.framework */,
 				F6DE6E5D1DF4DBD4002D20D2 /* Security.framework */,
 				F6DE6E5B1DF4DBC6002D20D2 /* CFNetwork.framework */,
@@ -141,6 +169,8 @@
 				F6E827641DE86160004845B6 /* GalleryCollectionViewCell.swift */,
 				F64228F31DEECBB000AA870A /* SearchViewController.swift */,
 				F6DE6E561DF4DA74002D20D2 /* CalabarYellowPages-Bridging-Header.h */,
+				F6CBE7561DF9DD77003B5DAC /* Login.swift */,
+				F6CBE7581DF9DDED003B5DAC /* TabBar.swift */,
 			);
 			path = CalabarYellowPages;
 			sourceTree = "<group>";
@@ -228,11 +258,13 @@
 				F6D2658F1DE36A360032DC64 /* CategoryListViewCell.swift in Sources */,
 				F64228F41DEECBB000AA870A /* SearchViewController.swift in Sources */,
 				F6E827651DE86160004845B6 /* GalleryCollectionViewCell.swift in Sources */,
+				F6CBE7571DF9DD77003B5DAC /* Login.swift in Sources */,
 				F677DB7C1DCF808800DD2A84 /* AppDelegate.swift in Sources */,
 				F602D3C71DE0C38E00AB0DD6 /* PlusTableViewController.swift in Sources */,
 				F602D3BD1DE08CFC00AB0DD6 /* TableViewCell.swift in Sources */,
 				F602D3C51DE0C2AA00AB0DD6 /* PlusViewCell.swift in Sources */,
 				F6D265911DE36BCC0032DC64 /* CategoryListController.swift in Sources */,
+				F6CBE7591DF9DDED003B5DAC /* TabBar.swift in Sources */,
 				F602D3C31DE08EDA00AB0DD6 /* TableViewController.swift in Sources */,
 				F602D3BF1DE08D5900AB0DD6 /* DataModel.swift in Sources */,
 				F6E827611DE7AE5F004845B6 /* PlusViewController.swift in Sources */,
@@ -354,6 +386,7 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/CalabarYellowPages",
 				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = /Users/SMILECS/Documents/FacebookSDK;
 				INFOPLIST_FILE = CalabarYellowPages/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
@@ -374,6 +407,7 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/CalabarYellowPages",
 				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = /Users/SMILECS/Documents/FacebookSDK;
 				INFOPLIST_FILE = CalabarYellowPages/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
