@@ -50,7 +50,7 @@ class PlusTableViewController: UIViewController, UITableViewDelegate, UITableVie
         if indexPath.row == lastElement {
             page += 1
             let string = String(page)
-            get_data("https://calabaryellowpages.herokuapp.com/api/falseview?page="+string)
+            get_data("https://calabaryellowpages.herokuapp.com/api/pluslistings?p="+string)
         }
     }
     
@@ -144,9 +144,10 @@ class PlusTableViewController: UIViewController, UITableViewDelegate, UITableVie
             }
             do{
                 let jsonResult = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
-                let data = jsonResult["Data"] as! NSArray
+                let data = jsonResult["Posts"] as! NSArray
                 for item in data{
-                    let tm = item as! NSDictionary
+                    let tmm = item as! NSDictionary
+                    let tm = tmm["Listing"] as! NSDictionary
                     let dataModel:DataModel = DataModel()
                     dataModel.Title = (tm["CompanyName"] as! String?)!
                     dataModel.Slug = (tm["Slug"]as! String?)!
@@ -154,7 +155,7 @@ class PlusTableViewController: UIViewController, UITableViewDelegate, UITableVie
                     dataModel.Address = (tm["Address"] as! String?)!
                     dataModel.Specialisation = (tm["Specialisation"] as! String?)!
                     dataModel.Description = (tm["About"] as! String?)!
-                    dataModel.WorkDays = (tm["Dhr"] as! String?)!
+                    dataModel.WorkDays = (tm["DHr"] as! String?)!
                     dataModel.Image = (tm["Image"] as! String?)!
                     for itms in (tm["Images"] as! NSArray?)!
                     

@@ -119,26 +119,14 @@
 		F677DB6F1DCF808800DD2A84 = {
 			isa = PBXGroup;
 			children = (
-				F6CBE7811DFADED1003B5DAC /* GoogleMobileAds.framework */,
-				F6CBE7791DFA9CAC003B5DAC /* Bolts.framework */,
-				F6CBE77A1DFA9CAC003B5DAC /* FBSDKCoreKit.framework */,
-				F6CBE77B1DFA9CAC003B5DAC /* FBSDKLoginKit.framework */,
-				F6CBE77C1DFA9CAC003B5DAC /* FBSDKShareKit.framework */,
-				F6CBE7771DFA04C0003B5DAC /* GTMSessionFetcher.framework */,
-				F6CBE7751DFA02E2003B5DAC /* FirebaseAuth.framework */,
+				F6DBE5CF1E0331B500A54EA9 /* firebase */,
+				F6DBE5D01E0331CB00A54EA9 /* facebook */,
 				F6DE6E5F1DF4DBEB002D20D2 /* SystemConfiguration.framework */,
 				F6DE6E5D1DF4DBD4002D20D2 /* Security.framework */,
 				F6DE6E5B1DF4DBC6002D20D2 /* CFNetwork.framework */,
 				F6DE6E591DF4DBAF002D20D2 /* libc++.tbd */,
 				F6DE6E511DF4D895002D20D2 /* module.modulemap */,
 				F6DE6E4E1DF4D85A002D20D2 /* libicucore.tbd */,
-				F6DE6E421DF4D7B6002D20D2 /* FirebaseAnalytics.framework */,
-				F6DE6E431DF4D7B6002D20D2 /* FirebaseCore.framework */,
-				F6DE6E441DF4D7B6002D20D2 /* FirebaseInstanceID.framework */,
-				F6DE6E451DF4D7B6002D20D2 /* GoogleInterchangeUtilities.framework */,
-				F6DE6E461DF4D7B6002D20D2 /* GoogleSymbolUtilities.framework */,
-				F6DE6E471DF4D7B6002D20D2 /* GoogleToolboxForMac.framework */,
-				F6DE6E1F1DF4C8E7002D20D2 /* firebaseAnalytics */,
 				F677DB7A1DCF808800DD2A84 /* CalabarYellowPages */,
 				F677DB791DCF808800DD2A84 /* Products */,
 			);
@@ -179,11 +167,31 @@
 			path = CalabarYellowPages;
 			sourceTree = "<group>";
 		};
-		F6DE6E1F1DF4C8E7002D20D2 /* firebaseAnalytics */ = {
+		F6DBE5CF1E0331B500A54EA9 /* firebase */ = {
 			isa = PBXGroup;
 			children = (
+				F6CBE7811DFADED1003B5DAC /* GoogleMobileAds.framework */,
+				F6CBE7771DFA04C0003B5DAC /* GTMSessionFetcher.framework */,
+				F6CBE7751DFA02E2003B5DAC /* FirebaseAuth.framework */,
+				F6DE6E421DF4D7B6002D20D2 /* FirebaseAnalytics.framework */,
+				F6DE6E431DF4D7B6002D20D2 /* FirebaseCore.framework */,
+				F6DE6E441DF4D7B6002D20D2 /* FirebaseInstanceID.framework */,
+				F6DE6E451DF4D7B6002D20D2 /* GoogleInterchangeUtilities.framework */,
+				F6DE6E461DF4D7B6002D20D2 /* GoogleSymbolUtilities.framework */,
+				F6DE6E471DF4D7B6002D20D2 /* GoogleToolboxForMac.framework */,
 			);
-			name = firebaseAnalytics;
+			name = firebase;
+			sourceTree = "<group>";
+		};
+		F6DBE5D01E0331CB00A54EA9 /* facebook */ = {
+			isa = PBXGroup;
+			children = (
+				F6CBE7791DFA9CAC003B5DAC /* Bolts.framework */,
+				F6CBE77A1DFA9CAC003B5DAC /* FBSDKCoreKit.framework */,
+				F6CBE77B1DFA9CAC003B5DAC /* FBSDKLoginKit.framework */,
+				F6CBE77C1DFA9CAC003B5DAC /* FBSDKShareKit.framework */,
+			);
+			name = facebook;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,7 +226,6 @@
 				TargetAttributes = {
 					F677DB771DCF808800DD2A84 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = VN4DZ3EL57;
 					};
 				};
 			};
@@ -386,6 +393,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -408,6 +416,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

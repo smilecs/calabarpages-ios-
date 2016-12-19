@@ -570,12 +570,6 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Awf-5j-vbZ">
-                                                <rect key="frame" x="60" y="517" width="307" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faN-4Q-Jiy">
                                                 <rect key="frame" x="60" y="576" width="307" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -601,6 +595,16 @@
                                                     <constraint firstAttribute="height" constant="53" id="yIb-rm-6WB"/>
                                                 </constraints>
                                             </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Awf-5j-vbZ">
+                                                <rect key="frame" x="60" y="517" width="307" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="2W8-rt-0DD"/>
+                                                    <constraint firstAttribute="width" constant="307" id="hMM-s3-Mms"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -639,6 +643,7 @@
                                             <constraint firstItem="0Fm-aF-Ke9" firstAttribute="leading" secondItem="tQU-43-wvl" secondAttribute="leading" id="luG-eA-zLV"/>
                                             <constraint firstItem="Er5-BM-CpJ" firstAttribute="top" secondItem="2EG-bA-nBd" secondAttribute="top" constant="112" id="m1p-gf-7N7"/>
                                             <constraint firstItem="Kvb-Up-O2c" firstAttribute="trailing" secondItem="Awf-5j-vbZ" secondAttribute="trailing" id="mG5-3T-cRG"/>
+                                            <constraint firstItem="Awf-5j-vbZ" firstAttribute="trailing" secondItem="2EG-bA-nBd" secondAttribute="trailingMargin" id="nKC-qQ-lfk"/>
                                             <constraint firstItem="yzL-BX-Blr" firstAttribute="bottom" secondItem="2EG-bA-nBd" secondAttribute="bottomMargin" id="nZk-Bi-HSU"/>
                                             <constraint firstItem="Er5-BM-CpJ" firstAttribute="centerX" secondItem="tQU-43-wvl" secondAttribute="centerX" id="rZN-b5-v43"/>
                                             <constraint firstItem="Er5-BM-CpJ" firstAttribute="centerX" secondItem="7TP-dC-MQF" secondAttribute="centerX" id="rZg-yP-0G6"/>

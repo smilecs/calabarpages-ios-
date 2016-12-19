@@ -28,7 +28,7 @@ class CategoryListController: UIViewController, UITableViewDelegate, UITableView
         indicator.startAnimating()
         indicator.backgroundColor = UIColor.whiteColor()
         //api/newview?page=" + page + "&q=
-        get_data("https://calabaryellowpages.herokuapp.com/api/newview?page=1&q="+slug)
+        get_data("https://calabaryellowpages.herokuapp.com/api/categories/"+slug+"?p=1")
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -122,7 +122,7 @@ class CategoryListController: UIViewController, UITableViewDelegate, UITableView
         if indexPath.row == lastElement {
             page += 1
             let string = String(page)
-            get_data("https://calabaryellowpages.herokuapp.com/api/newview?page="+string+"&q="+slug)
+            get_data("https://calabaryellowpages.herokuapp.com/api/categories/"+slug+"?p="+string)
         }
     }
     
@@ -158,9 +158,10 @@ class CategoryListController: UIViewController, UITableViewDelegate, UITableView
             }
             do{
                 let jsonResult = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
-                let data = jsonResult["Data"] as! NSArray
+                let data = jsonResult["Posts"] as! NSArray
                 for item in data{
-                    let tm = item as! NSDictionary
+                    let tmm = item as! NSDictionary
+                    let tm = tmm["Listing"] as! NSDictionary
                     let dataModel:DataModel = DataModel()
                     dataModel.Title = tm["CompanyName"] as! String
                     dataModel.Slug = tm["Slug"]as! String
@@ -168,7 +169,7 @@ class CategoryListController: UIViewController, UITableViewDelegate, UITableView
                     dataModel.Address = tm["Address"] as! String
                     dataModel.Specialisation = tm["Specialisation"] as! String
                     dataModel.WorkDays = tm["Dhr"] as! String
-                    dataModel.Type = tm["Type"] as! String
+                    dataModel.Type = tm["Plus"] as! String
                     dataModel.Image = tm["Image"] as! String
                     dataModel.Web = tm["Website"] as! String
                     self.TableData.append(dataModel)
