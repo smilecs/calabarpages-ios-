@@ -50,7 +50,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
         if indexPath.row == lastElement {
             page += 1
             let string = String(page)
-            get_data("https://calabaryellowpages.herokuapp.com/api/result?page="+string+"&q=" + QueryString)
+            get_data("https://calabaryellowpages.herokuapp.com/api/search?p="+string+"&q=" + QueryString)
         }
     }
     
@@ -80,7 +80,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         QueryString = searchBar.text!
         indicator.startAnimating()
-        get_data("https://calabaryellowpages.herokuapp.com/api/result?page=1&q=" + searchBar.text!)
+        get_data("https://calabaryellowpages.herokuapp.com/api/search?p=1&q=" + searchBar.text!)
         
     }
     
@@ -151,10 +151,11 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
             }
             do{
                 let jsonResult = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
-                if ((jsonResult["Data"] as? String) != nil) {
-                    let data = jsonResult["Data"] as! NSArray
+                if ((jsonResult["Posts"] as? String) != nil) {
+                    let data = jsonResult["Posts"] as! NSArray
                     for item in data{
-                        let tm = item as! NSDictionary
+                        let tmm = item as! NSDictionary
+                        let tm = tmm["Listing"] as! NSDictionary
                         let dataModel:DataModel = DataModel()
                         dataModel.Title = (tm["CompanyName"] as! String?)!
                         dataModel.Slug = (tm["Slug"]as! String?)!

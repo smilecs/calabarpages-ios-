@@ -45,7 +45,7 @@
                                     <constraint firstAttribute="width" constant="375" id="tVK-uE-IOp"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -451,7 +451,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="agl-On-Wsd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-71.5" y="1771.5"/>
+            <point key="canvasLocation" x="-274.5" y="1881.5"/>
         </scene>
         <!--Plus View Controller-->
         <scene sceneID="WVW-PV-YqX">
