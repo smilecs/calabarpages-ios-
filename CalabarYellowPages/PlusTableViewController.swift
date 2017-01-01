@@ -144,6 +144,7 @@ class PlusTableViewController: UIViewController, UITableViewDelegate, UITableVie
             }
             do{
                 let jsonResult = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
+                print(jsonResult)
                 let data = jsonResult["Posts"] as! NSArray
                 for item in data{
                     let tmm = item as! NSDictionary

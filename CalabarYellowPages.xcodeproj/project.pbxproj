@@ -77,7 +77,7 @@
 		F6DE6E461DF4D7B6002D20D2 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
 		F6DE6E471DF4D7B6002D20D2 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleToolboxForMac.framework; sourceTree = "<group>"; };
 		F6DE6E4E1DF4D85A002D20D2 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
-		F6DE6E501DF4D895002D20D2 /* Firebase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = ../../../Downloads/Firebase/Firebase.h; sourceTree = "<group>"; };
+		F6DE6E501DF4D895002D20D2 /* Firebase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = ../../Downloads/Firebase/Firebase.h; sourceTree = "<group>"; };
 		F6DE6E511DF4D895002D20D2 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = ../../Downloads/Firebase/module.modulemap; sourceTree = "<group>"; };
 		F6DE6E561DF4DA74002D20D2 /* CalabarYellowPages-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CalabarYellowPages-Bridging-Header.h"; sourceTree = "<group>"; };
 		F6DE6E591DF4DBAF002D20D2 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
@@ -144,7 +144,6 @@
 			isa = PBXGroup;
 			children = (
 				F6CBE7831DFAEC40003B5DAC /* CollectionViewCell.swift */,
-				F6DE6E501DF4D895002D20D2 /* Firebase.h */,
 				F6DE6E251DF4CC7A002D20D2 /* GoogleService-Info.plist */,
 				F677DB7B1DCF808800DD2A84 /* AppDelegate.swift */,
 				F677DB811DCF808800DD2A84 /* Main.storyboard */,
@@ -170,10 +169,11 @@
 		F6DBE5CF1E0331B500A54EA9 /* firebase */ = {
 			isa = PBXGroup;
 			children = (
+				F6DE6E501DF4D895002D20D2 /* Firebase.h */,
+				F6DE6E421DF4D7B6002D20D2 /* FirebaseAnalytics.framework */,
 				F6CBE7811DFADED1003B5DAC /* GoogleMobileAds.framework */,
 				F6CBE7771DFA04C0003B5DAC /* GTMSessionFetcher.framework */,
 				F6CBE7751DFA02E2003B5DAC /* FirebaseAuth.framework */,
-				F6DE6E421DF4D7B6002D20D2 /* FirebaseAnalytics.framework */,
 				F6DE6E431DF4D7B6002D20D2 /* FirebaseCore.framework */,
 				F6DE6E441DF4D7B6002D20D2 /* FirebaseInstanceID.framework */,
 				F6DE6E451DF4D7B6002D20D2 /* GoogleInterchangeUtilities.framework */,
@@ -226,6 +226,7 @@
 				TargetAttributes = {
 					F677DB771DCF808800DD2A84 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 2CVRQ34ZA9;
 					};
 				};
 			};
@@ -393,7 +394,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -401,10 +402,12 @@
 				);
 				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = /Users/SMILECS/Documents/FacebookSDK;
 				INFOPLIST_FILE = CalabarYellowPages/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.calabarpages.CalabarYellowPages;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3a90cada-3f50-483b-a0cd-8253ecd9ff21";
 				SWIFT_OBJC_BRIDGING_HEADER = "CalabarYellowPages/CalabarYellowPages-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -416,7 +419,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: calabar pages (2CVRQ34ZA9)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -424,10 +427,12 @@
 				);
 				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = /Users/SMILECS/Documents/FacebookSDK;
 				INFOPLIST_FILE = CalabarYellowPages/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
+				"OTHER_LDFLAGS[sdk=iphoneos*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.calabarpages.CalabarYellowPages;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3a90cada-3f50-483b-a0cd-8253ecd9ff21";
 				SWIFT_OBJC_BRIDGING_HEADER = "CalabarYellowPages/CalabarYellowPages-Bridging-Header.h";
 			};
 			name = Release;

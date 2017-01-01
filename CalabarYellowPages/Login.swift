@@ -10,6 +10,23 @@ import UIKit
 
 class Login: UIViewController, FBSDKLoginButtonDelegate{
 
+    @IBAction func skip(sender: UIButton) {
+        let preferences = NSUserDefaults.standardUserDefaults()
+        
+        let currentLevelKey = "loggedIn"
+        
+        let currentLevel = 1
+        preferences.setInteger(currentLevel, forKey: currentLevelKey)
+        
+        //  Save to disk
+        preferences.synchronize()
+
+        
+        let logginControl:TabBar =  self.storyboard?.instantiateViewControllerWithIdentifier("main") as! TabBar
+        dispatch_async(dispatch_get_main_queue(), {() -> Void in
+            self.presentViewController(logginControl, animated: true, completion: nil)
+        })
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         if (FBSDKAccessToken.currentAccessToken() == nil)
@@ -96,7 +113,7 @@ class Login: UIViewController, FBSDKLoginButtonDelegate{
                     "email" : userEmail,
                     "name" : userName ]
                 
-                let url = NSURL(string:DataModel.Url + "facebookLogin")
+                let url = NSURL(string:DataModel.Url + "api/login/facebook")
                 let request = NSMutableURLRequest(URL: url!)
                 request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
                 request.HTTPMethod = "POST"

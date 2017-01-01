@@ -53,13 +53,29 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q7a-SR-atp">
+                                <rect key="frame" x="279" y="538" width="71" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="71" id="qgp-qO-uER"/>
+                                    <constraint firstAttribute="height" constant="45" id="yBp-nN-gxH"/>
+                                </constraints>
+                                <state key="normal" title="Skip">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="skip:" destination="hFU-Se-WOG" eventType="touchUpInside" id="cSx-tB-1mk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="q7a-SR-atp" secondAttribute="trailing" constant="5" id="8YJ-Uh-VdF"/>
                             <constraint firstItem="NwS-BH-Dax" firstAttribute="leading" secondItem="jWm-An-JMY" secondAttribute="leadingMargin" constant="-20" id="Q2g-X3-iC9"/>
                             <constraint firstItem="gbU-RK-haa" firstAttribute="top" secondItem="NwS-BH-Dax" secondAttribute="bottom" constant="531" id="aEe-GD-abM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NwS-BH-Dax" secondAttribute="trailing" constant="-20" id="bhE-Yq-9a9"/>
+                            <constraint firstItem="q7a-SR-atp" firstAttribute="top" secondItem="NwS-BH-Dax" secondAttribute="bottom" constant="402" id="co5-nL-LeD"/>
                             <constraint firstItem="NwS-BH-Dax" firstAttribute="top" secondItem="sxR-Rl-MzU" secondAttribute="bottom" constant="54" id="deT-fG-oDe"/>
+                            <constraint firstItem="q7a-SR-atp" firstAttribute="leading" secondItem="jWm-An-JMY" secondAttribute="leadingMargin" constant="259" id="fOW-0U-vZO"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -514,7 +530,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="200" id="3hu-5d-IPW"/>
                                                 </constraints>
-                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QOJ-AA-Gb2">
+                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QOJ-AA-Gb2">
                                                     <size key="itemSize" width="367" height="178"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -522,7 +538,7 @@
                                                 </collectionViewFlowLayout>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="2Uz-J5-W4D" customClass="CollectionViewCell" customModule="CalabarYellowPages" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="11" width="367" height="178"/>
+                                                        <rect key="frame" x="4" y="0.0" width="367" height="178"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                             <rect key="frame" x="0.0" y="0.0" width="367" height="178"/>
