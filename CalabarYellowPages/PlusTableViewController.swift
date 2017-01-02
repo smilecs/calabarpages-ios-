@@ -133,7 +133,7 @@ class PlusTableViewController: UIViewController, UITableViewDelegate, UITableVie
     func get_data(_ url:String)
     {
         let url = URL(string: url)
-        let urlRequest = NSMutableURLRequest(url: url!)
+        var urlRequest = URLRequest(url: url!)
         urlRequest.httpMethod = "GET"
         let task = URLSession.shared.dataTask(with: urlRequest, completionHandler: {
             data, response, error in

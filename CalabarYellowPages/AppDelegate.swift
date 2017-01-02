@@ -7,13 +7,13 @@
 //
 
 import UIKit
-import GoogleSignIn
-import GoogleMobileAds
+
 
 
 
 
 @UIApplicationMain
+import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
@@ -54,9 +54,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         open url: URL,
         sourceApplication: String?,
         annotation: Any) -> Bool {
-            return FBSDKApplicationDelegate.sharedInstance().application(
-                application,
-                openURL: url,
+        return FBSDKApplicationDelegate.sharedInstance().application(
+            application,
+            open: url,
                 sourceApplication: sourceApplication,
                 annotation: annotation)
     }

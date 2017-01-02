@@ -29,7 +29,7 @@ class Login: UIViewController, FBSDKLoginButtonDelegate{
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        if (FBSDKAccessToken.currentAccessToken() == nil)
+        if (FBSDKAccessToken.current() == nil)
         {
             let loginView : FBSDKLoginButton = FBSDKLoginButton()
             self.view.addSubview(loginView)
@@ -54,7 +54,7 @@ class Login: UIViewController, FBSDKLoginButtonDelegate{
         // Dispose of any resources that can be recreated.
     }
     
-    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
         print("User Logged In")
         
         if ((error) != nil)
@@ -81,7 +81,7 @@ class Login: UIViewController, FBSDKLoginButtonDelegate{
     func returnUserData()
     {
         let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields":"email,first_name,gender"])
-        graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
+        graphRequest.start(completionHandler: { (connection, result, error) -> Void in
             
             if ((error) != nil)
             {
@@ -90,12 +90,12 @@ class Login: UIViewController, FBSDKLoginButtonDelegate{
             }
             else
             {
-                let preferences = NSUserDefaults.standardUserDefaults()
+                let preferences = UserDefaults.standard
                 
                 let currentLevelKey = "loggedIn"
                 
                 let currentLevel = 1
-                    preferences.setInteger(currentLevel, forKey: currentLevelKey)
+                    preferences.set(currentLevel, forKey: currentLevelKey)
                 
                 //  Save to disk
                 let didSave = preferences.synchronize()
@@ -103,28 +103,28 @@ class Login: UIViewController, FBSDKLoginButtonDelegate{
                 if !didSave {
                     //  Couldn't save (I've never seen this happen in real world testing)
                 }
-                print("fetched user: \(result)")
-                let userName : NSString = result.valueForKey("first_name") as! NSString
-                let userEmail : NSString = result.valueForKey("email") as! NSString
+                let results = result as! NSDictionary
+                let userName : NSString = results.value(forKey: "first_name") as! NSString
+                let userEmail : NSString = results.value(forKey: "email") as! NSString
                 print("User Email is: \(userEmail)")
-                let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
-                let session = NSURLSession(configuration: configuration)
+                let configuration = URLSessionConfiguration.default
+                let session = URLSession(configuration: configuration)
                 let params:[String: AnyObject] = [
                     "email" : userEmail,
                     "name" : userName ]
                 
                 let url = NSURL(string:DataModel.Url + "api/login/facebook")
-                let request = NSMutableURLRequest(URL: url!)
+                let request = NSMutableURLRequest(url: url! as URL)
                 request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
-                request.HTTPMethod = "POST"
+                request.httpMethod = "POST"
                // var err: NSError?
                 do{
-                    try request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: NSJSONWritingOptions())
+                    try request.httpBody = JSONSerialization.data(withJSONObject: params, options: JSONSerialization.WritingOptions())
                     
-                    let task = session.dataTaskWithRequest(request) {
+                    let task = session.dataTask(with: request as URLRequest) {
                         data, response, error in
                         
-                        if let httpResponse = response as? NSHTTPURLResponse {
+                        if let httpResponse = response as? HTTPURLResponse {
                             if httpResponse.statusCode != 200 {
                                 print("response was not 200: \(response)")
                                 return
@@ -145,9 +145,9 @@ class Login: UIViewController, FBSDKLoginButtonDelegate{
                     
                 }
                 
-                let logginControl:TabBar = self.storyboard?.instantiateViewControllerWithIdentifier("main") as! TabBar
-                dispatch_async(dispatch_get_main_queue(), {() -> Void in
-                    self.presentViewController(logginControl, animated: true, completion: nil)
+                let logginControl:TabBar = self.storyboard?.instantiateViewController(withIdentifier: "main") as! TabBar
+                DispatchQueue.main.async(execute: {() -> Void in
+                    self.present(logginControl, animated: true, completion: nil)
                 })
                 
             }
