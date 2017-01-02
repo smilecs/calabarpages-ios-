@@ -14,7 +14,7 @@ class DataModel{
     var WorkDays:String
     var Phone:String
     var Slug:String
-    var Type:String
+    var `Type`:String
     var ImageAray:[String]
     var Web:String
     var Image, Specialisation:String

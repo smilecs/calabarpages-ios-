@@ -1,0 +1,350 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D998FB3A8AE3199F2EB5F80E93D238D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		737AFB431C8EECF05085F95798F05830 /* Pods-CalabarYellowPages-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EFC4DBB886987FADD4BED0D94280FA66 /* Pods-CalabarYellowPages-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7EE4809E4DC125EF887DE66A24D65CD7 /* Pods-CalabarYellowPages-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A23CC528D5A82B4AA3ECB36BCE405714 /* Pods-CalabarYellowPages-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		24F8D4ECB3E816492A8374C9C1507112 /* Pods_CalabarYellowPages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CalabarYellowPages.framework; path = "Pods-CalabarYellowPages.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B3F828B9BEA4B4DBBCC67C934CEB4FC /* Pods-CalabarYellowPages-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CalabarYellowPages-frameworks.sh"; sourceTree = "<group>"; };
+		4AFCCE8FDEBFF46405E115E02BA8ECAE /* Pods-CalabarYellowPages.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CalabarYellowPages.release.xcconfig"; sourceTree = "<group>"; };
+		6008FC0ED06E81CFAD4BFB2BB319AAD4 /* Pods-CalabarYellowPages-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CalabarYellowPages-resources.sh"; sourceTree = "<group>"; };
+		67202D21D05F881137C743B9B937866D /* Pods-CalabarYellowPages.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CalabarYellowPages.modulemap"; sourceTree = "<group>"; };
+		6BDC5A432518DA90CE7641D81A68DB1E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A23CC528D5A82B4AA3ECB36BCE405714 /* Pods-CalabarYellowPages-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CalabarYellowPages-dummy.m"; sourceTree = "<group>"; };
+		AD58534BA9B9DC03660FD573F6054CDA /* Pods-CalabarYellowPages-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CalabarYellowPages-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B970858811A9263DFDC1E8EAB6E0DEC1 /* Pods-CalabarYellowPages-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CalabarYellowPages-acknowledgements.plist"; sourceTree = "<group>"; };
+		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		EFC4DBB886987FADD4BED0D94280FA66 /* Pods-CalabarYellowPages-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CalabarYellowPages-umbrella.h"; sourceTree = "<group>"; };
+		F0098F77A4E162FE8C7A60E7C4C13354 /* Pods-CalabarYellowPages.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CalabarYellowPages.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		70368C94AD99C4CE86180B50DF7F977B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D998FB3A8AE3199F2EB5F80E93D238D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7971B19A470D4F4B1633EFD67CEC6458 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				24F8D4ECB3E816492A8374C9C1507112 /* Pods_CalabarYellowPages.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				7971B19A470D4F4B1633EFD67CEC6458 /* Products */,
+				865E91CE37EB9945600CB80BB7BCF5D1 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		865E91CE37EB9945600CB80BB7BCF5D1 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FBFCDC8E2E85CD07D2BF4015577840FF /* Pods-CalabarYellowPages */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FBFCDC8E2E85CD07D2BF4015577840FF /* Pods-CalabarYellowPages */ = {
+			isa = PBXGroup;
+			children = (
+				6BDC5A432518DA90CE7641D81A68DB1E /* Info.plist */,
+				67202D21D05F881137C743B9B937866D /* Pods-CalabarYellowPages.modulemap */,
+				AD58534BA9B9DC03660FD573F6054CDA /* Pods-CalabarYellowPages-acknowledgements.markdown */,
+				B970858811A9263DFDC1E8EAB6E0DEC1 /* Pods-CalabarYellowPages-acknowledgements.plist */,
+				A23CC528D5A82B4AA3ECB36BCE405714 /* Pods-CalabarYellowPages-dummy.m */,
+				2B3F828B9BEA4B4DBBCC67C934CEB4FC /* Pods-CalabarYellowPages-frameworks.sh */,
+				6008FC0ED06E81CFAD4BFB2BB319AAD4 /* Pods-CalabarYellowPages-resources.sh */,
+				EFC4DBB886987FADD4BED0D94280FA66 /* Pods-CalabarYellowPages-umbrella.h */,
+				F0098F77A4E162FE8C7A60E7C4C13354 /* Pods-CalabarYellowPages.debug.xcconfig */,
+				4AFCCE8FDEBFF46405E115E02BA8ECAE /* Pods-CalabarYellowPages.release.xcconfig */,
+			);
+			name = "Pods-CalabarYellowPages";
+			path = "Target Support Files/Pods-CalabarYellowPages";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D9333442EB0C9BFA0A7E074FF0442B95 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				737AFB431C8EECF05085F95798F05830 /* Pods-CalabarYellowPages-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		6816EAD5E4AB1CDE49A13BC9C9B7800C /* Pods-CalabarYellowPages */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D79D9127D252676F80D5C39B4356A48 /* Build configuration list for PBXNativeTarget "Pods-CalabarYellowPages" */;
+			buildPhases = (
+				43D9BDDBEAF48217AB09A5C96884C54A /* Sources */,
+				70368C94AD99C4CE86180B50DF7F977B /* Frameworks */,
+				D9333442EB0C9BFA0A7E074FF0442B95 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-CalabarYellowPages";
+			productName = "Pods-CalabarYellowPages";
+			productReference = 24F8D4ECB3E816492A8374C9C1507112 /* Pods_CalabarYellowPages.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 7971B19A470D4F4B1633EFD67CEC6458 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6816EAD5E4AB1CDE49A13BC9C9B7800C /* Pods-CalabarYellowPages */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		43D9BDDBEAF48217AB09A5C96884C54A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EE4809E4DC125EF887DE66A24D65CD7 /* Pods-CalabarYellowPages-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2E1518244B1BF8C97225B598DD119BFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0098F77A4E162FE8C7A60E7C4C13354 /* Pods-CalabarYellowPages.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-CalabarYellowPages/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CalabarYellowPages/Pods-CalabarYellowPages.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_CalabarYellowPages;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AADB9822762AD81BBAE83335B2AB1EB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ACB92EE8EEFEA6DB51F9CC4DB7E943B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AFCCE8FDEBFF46405E115E02BA8ECAE /* Pods-CalabarYellowPages.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-CalabarYellowPages/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CalabarYellowPages/Pods-CalabarYellowPages.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_CalabarYellowPages;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B1B5EB0850F98CB5AECDB015B690777F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1B5EB0850F98CB5AECDB015B690777F /* Debug */,
+				AADB9822762AD81BBAE83335B2AB1EB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D79D9127D252676F80D5C39B4356A48 /* Build configuration list for PBXNativeTarget "Pods-CalabarYellowPages" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E1518244B1BF8C97225B598DD119BFC /* Debug */,
+				ACB92EE8EEFEA6DB51F9CC4DB7E943B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
