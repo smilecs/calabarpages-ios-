@@ -34,18 +34,18 @@ class PlusTableViewController: UIViewController, UITableViewDelegate, UITableVie
 
     // MARK: - Table view data source
 
-     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
        
         return TableData.count
     }
     
-    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let lastElement = TableData.count - 1
         if indexPath.row == lastElement {
             page += 1
@@ -54,51 +54,51 @@ class PlusTableViewController: UIViewController, UITableViewDelegate, UITableVie
         }
     }
     
-    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         
     }
     
-    func searchBarTextDidEndEditing(searchBar: UISearchBar) {
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         
     }
     
-    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
        
         
     }
     
-    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-         let categoryList:SearchViewController = self.storyboard?.instantiateViewControllerWithIdentifier("searchResult") as! SearchViewController
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+         let categoryList:SearchViewController = self.storyboard?.instantiateViewController(withIdentifier: "searchResult") as! SearchViewController
         categoryList.QueryString = searchBar.text!
-        dispatch_async(dispatch_get_main_queue(), {() -> Void in
-                 self.presentViewController(categoryList, animated: true, completion: nil)
+        DispatchQueue.main.async(execute: {() -> Void in
+                 self.present(categoryList, animated: true, completion: nil)
             })
     }
     
-    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
            }
 
     
-     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! PlusViewCell
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! PlusViewCell
             let item = TableData[indexPath.row]
             cell.title?.text = item.Title
             cell.Address?.text = item.Address
             cell.special?.text = item.Specialisation
             cell.workDays?.text = item.WorkDays
             cell.Phone?.text = item.Phone
-            if let url = NSURL(string: item.Image), datas = NSData(contentsOfURL: url){
+            if let url = URL(string: item.Image), let datas = try? Data(contentsOf: url){
                 cell.plusLogo.image = UIImage(data: datas)
             
         }
         return cell
     }
     
-     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let dataToPass = TableData[indexPath.row]
         if(dataToPass.Type == "true"){
-            let categoryList:PlusViewController = self.storyboard?.instantiateViewControllerWithIdentifier("plusDetailView") as! PlusViewController
+            let categoryList:PlusViewController = self.storyboard?.instantiateViewController(withIdentifier: "plusDetailView") as! PlusViewController
             categoryList.Address = dataToPass.Address
             categoryList.titleM = dataToPass.Title
             categoryList.ImageAray = dataToPass.ImageAray
@@ -108,8 +108,8 @@ class PlusTableViewController: UIViewController, UITableViewDelegate, UITableVie
             categoryList.special = dataToPass.Specialisation
             categoryList.web = dataToPass.Web
             categoryList.logo = dataToPass.Image
-            dispatch_async(dispatch_get_main_queue(), {() -> Void in
-                self.presentViewController(categoryList, animated: true, completion: nil)
+            DispatchQueue.main.async(execute: {() -> Void in
+                self.present(categoryList, animated: true, completion: nil)
             })
 
         }
@@ -130,12 +130,12 @@ class PlusTableViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     */
     
-    func get_data(url:String)
+    func get_data(_ url:String)
     {
-        let url = NSURL(string: url)
-        let urlRequest = NSMutableURLRequest(URL: url!)
-        urlRequest.HTTPMethod = "GET"
-        let task = NSURLSession.sharedSession().dataTaskWithRequest(urlRequest){
+        let url = URL(string: url)
+        let urlRequest = NSMutableURLRequest(url: url!)
+        urlRequest.httpMethod = "GET"
+        let task = URLSession.shared.dataTask(with: urlRequest, completionHandler: {
             data, response, error in
             if error != nil
             {
@@ -143,7 +143,7 @@ class PlusTableViewController: UIViewController, UITableViewDelegate, UITableVie
                 return
             }
             do{
-                let jsonResult = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
+                let jsonResult = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
                 print(jsonResult)
                 let data = jsonResult["Posts"] as! NSArray
                 for item in data{
@@ -168,7 +168,7 @@ class PlusTableViewController: UIViewController, UITableViewDelegate, UITableVie
                     
                     
                 }
-                dispatch_async(dispatch_get_main_queue(), {() -> Void in
+                DispatchQueue.main.async(execute: {() -> Void in
                     self.table.reloadData()
                 })
                 
@@ -176,7 +176,7 @@ class PlusTableViewController: UIViewController, UITableViewDelegate, UITableVie
             catch{
                 
             }
-        }
+        })
         task.resume()
         
     }

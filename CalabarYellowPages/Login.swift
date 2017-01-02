@@ -10,21 +10,21 @@ import UIKit
 
 class Login: UIViewController, FBSDKLoginButtonDelegate{
 
-    @IBAction func skip(sender: UIButton) {
-        let preferences = NSUserDefaults.standardUserDefaults()
+    @IBAction func skip(_ sender: UIButton) {
+        let preferences = UserDefaults.standard
         
         let currentLevelKey = "loggedIn"
         
         let currentLevel = 1
-        preferences.setInteger(currentLevel, forKey: currentLevelKey)
+        preferences.set(currentLevel, forKey: currentLevelKey)
         
         //  Save to disk
         preferences.synchronize()
 
         
-        let logginControl:TabBar =  self.storyboard?.instantiateViewControllerWithIdentifier("main") as! TabBar
-        dispatch_async(dispatch_get_main_queue(), {() -> Void in
-            self.presentViewController(logginControl, animated: true, completion: nil)
+        let logginControl:TabBar =  self.storyboard?.instantiateViewController(withIdentifier: "main") as! TabBar
+        DispatchQueue.main.async(execute: {() -> Void in
+            self.present(logginControl, animated: true, completion: nil)
         })
     }
     override func viewDidLoad() {
@@ -54,7 +54,7 @@ class Login: UIViewController, FBSDKLoginButtonDelegate{
         // Dispose of any resources that can be recreated.
     }
     
-    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
         print("User Logged In")
         
         if ((error) != nil)
@@ -74,7 +74,7 @@ class Login: UIViewController, FBSDKLoginButtonDelegate{
         }
     }
     
-    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
         print("User Logged Out")
     }
     

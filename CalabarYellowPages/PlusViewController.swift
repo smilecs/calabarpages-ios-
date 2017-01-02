@@ -38,10 +38,10 @@ class PlusViewController: UIViewController, UICollectionViewDataSource, UICollec
         self.CollectionView.delegate = self
         profileLogo.layer.borderWidth = 1
         profileLogo.layer.masksToBounds = false
-        profileLogo.layer.borderColor = UIColor.whiteColor().CGColor
+        profileLogo.layer.borderColor = UIColor.white.cgColor
         profileLogo.layer.cornerRadius = profileLogo.frame.height/2
         profileLogo.clipsToBounds = true
-        if let url = NSURL(string: logo), datas = NSData(contentsOfURL: url){
+        if let url = URL(string: logo), let datas = try? Data(contentsOf: url){
             profileLogo.image = UIImage(data: datas)
         }
         descriptionLabel?.text = Description
@@ -58,14 +58,14 @@ class PlusViewController: UIViewController, UICollectionViewDataSource, UICollec
         // Dispose of any resources that can be recreated.
     }
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return ImageAray.count
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let data = ImageAray[indexPath.row]
-        let cell:CollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! CollectionViewCell
-        if let url = NSURL(string: data), datas = NSData(contentsOfURL: url){
+        let cell:CollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
+        if let url = URL(string: data), let datas = try? Data(contentsOf: url){
             cell.gallery?.image = UIImage(data: datas)
             
         }

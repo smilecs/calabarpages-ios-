@@ -21,12 +21,12 @@ class CategoryListController: UIViewController, UITableViewDelegate, UITableView
         self.Tableview.delegate = self
         self.Tableview.dataSource = self
         self.searchBar.delegate = self
-        indicator = UIActivityIndicatorView(frame: CGRectMake(0, 0, 40, 40))
-        indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+        indicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
         indicator.center = self.view.center
         self.view.addSubview(indicator)
         indicator.startAnimating()
-        indicator.backgroundColor = UIColor.whiteColor()
+        indicator.backgroundColor = UIColor.white
         //api/newview?page=" + page + "&q=
         get_data("https://calabaryellowpages.herokuapp.com/api/categories/"+slug+"?p=1")
         // Uncomment the following line to preserve selection between presentations
@@ -41,50 +41,50 @@ class CategoryListController: UIViewController, UITableViewDelegate, UITableView
         // Dispose of any resources that can be recreated.
     }
     
-    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         
     }
     
-    func searchBarTextDidEndEditing(searchBar: UISearchBar) {
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         
     }
     
-    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         
         
     }
     
-    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-        let categoryList:SearchViewController = self.storyboard?.instantiateViewControllerWithIdentifier("searchResult") as! SearchViewController
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let categoryList:SearchViewController = self.storyboard?.instantiateViewController(withIdentifier: "searchResult") as! SearchViewController
         categoryList.QueryString = searchBar.text!
-        dispatch_async(dispatch_get_main_queue(), {() -> Void in
-            self.presentViewController(categoryList, animated: true, completion: nil)
+        DispatchQueue.main.async(execute: {() -> Void in
+            self.present(categoryList, animated: true, completion: nil)
         })
     }
     
-    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
     }
 
     // MARK: - Table view data source
 
-     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return TableData.count
     }
 
     
-     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let data = TableData[indexPath.row]
         var cell:CategoryListViewCell
         switch data.Type{
             case "false":
-                cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! CategoryListViewCell
+                cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CategoryListViewCell
                 
                 cell.Title?.text = data.Title
                 cell.Address?.text = data.Address
@@ -93,8 +93,8 @@ class CategoryListController: UIViewController, UITableViewDelegate, UITableView
                 cell.Specialisation?.text = data.Specialisation
             break
             case "true":
-                cell = tableView.dequeueReusableCellWithIdentifier("plus", forIndexPath: indexPath) as! CategoryListViewCell
-                if let url = NSURL(string: data.Image), datas = NSData(contentsOfURL: url){
+                cell = tableView.dequeueReusableCell(withIdentifier: "plus", for: indexPath) as! CategoryListViewCell
+                if let url = URL(string: data.Image), let datas = try? Data(contentsOf: url){
                     cell.logo?.image = UIImage(data: datas)
                     
                 }
@@ -105,8 +105,8 @@ class CategoryListController: UIViewController, UITableViewDelegate, UITableView
                 cell.Specialisation?.text = data.Specialisation
             break
         default:
-            cell = tableView.dequeueReusableCellWithIdentifier("advert", forIndexPath: indexPath) as! CategoryListViewCell
-            if let url = NSURL(string: data.Image), datas = NSData(contentsOfURL: url){
+            cell = tableView.dequeueReusableCell(withIdentifier: "advert", for: indexPath) as! CategoryListViewCell
+            if let url = URL(string: data.Image), let datas = try? Data(contentsOf: url){
                 cell.Advert?.image = UIImage(data: datas)
          
             }
@@ -117,7 +117,7 @@ class CategoryListController: UIViewController, UITableViewDelegate, UITableView
         
     }
     
-    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let lastElement = TableData.count - 1
         if indexPath.row == lastElement {
             page += 1
@@ -126,10 +126,10 @@ class CategoryListController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let dataToPass = TableData[indexPath.row]
         if dataToPass.Type == "true"{
-            let categoryList:PlusViewController = self.storyboard?.instantiateViewControllerWithIdentifier("plusDetailView") as! PlusViewController
+            let categoryList:PlusViewController = self.storyboard?.instantiateViewController(withIdentifier: "plusDetailView") as! PlusViewController
             categoryList.Address = dataToPass.Address
             categoryList.titleM = dataToPass.Title
             categoryList.ImageAray = dataToPass.ImageAray
@@ -139,17 +139,17 @@ class CategoryListController: UIViewController, UITableViewDelegate, UITableView
             categoryList.special = dataToPass.Specialisation
             categoryList.web = dataToPass.Web
             categoryList.logo = dataToPass.Image
-            self.presentViewController(categoryList, animated: true, completion: nil)
+            self.present(categoryList, animated: true, completion: nil)
         }
         
     }
     
-    func get_data(url:String)
+    func get_data(_ url:String)
     {
-        let url = NSURL(string: url)
-        let urlRequest = NSMutableURLRequest(URL: url!)
-        urlRequest.HTTPMethod = "GET"
-        let task = NSURLSession.sharedSession().dataTaskWithRequest(urlRequest){
+        let url = URL(string: url)
+        let urlRequest = NSMutableURLRequest(url: url!)
+        urlRequest.httpMethod = "GET"
+        let task = URLSession.shared.dataTask(with: urlRequest, completionHandler: {
             data, response, error in
             if error != nil
             {
@@ -157,7 +157,7 @@ class CategoryListController: UIViewController, UITableViewDelegate, UITableView
                 return
             }
             do{
-                let jsonResult = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
+                let jsonResult = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
                 let data = jsonResult["Posts"] as! NSArray
                 for item in data{
                     let tmm = item as! NSDictionary
@@ -176,7 +176,7 @@ class CategoryListController: UIViewController, UITableViewDelegate, UITableView
                     print(dataModel.Title)
                     
                 }
-                dispatch_async(dispatch_get_main_queue(), {() -> Void in
+                DispatchQueue.main.async(execute: {() -> Void in
                     self.indicator.stopAnimating()
                     self.indicator.hidesWhenStopped = true
                     self.Tableview.reloadData()
@@ -186,7 +186,7 @@ class CategoryListController: UIViewController, UITableViewDelegate, UITableView
             catch{
                 
             }
-        }
+        })
         task.resume()
         
     }

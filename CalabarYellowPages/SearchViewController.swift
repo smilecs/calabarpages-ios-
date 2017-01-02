@@ -29,12 +29,12 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
         self.tableView.dataSource = self
         self.tableView.delegate = self
         get_data("https://calabaryellowpages.herokuapp.com/api/result?page=1&q=" + QueryString)
-        indicator = UIActivityIndicatorView(frame: CGRectMake(0, 0, 40, 40))
-        indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+        indicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
         indicator.center = self.view.center
         self.view.addSubview(indicator)
         indicator.startAnimating()
-        indicator.backgroundColor = UIColor.whiteColor()
+        indicator.backgroundColor = UIColor.white
 
 
         // Do any additional setup after loading the view.
@@ -45,7 +45,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
         // Dispose of any resources that can be recreated.
     }
     
-    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let lastElement = TableData.count - 1
         if indexPath.row == lastElement {
             page += 1
@@ -54,57 +54,57 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
         }
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
        
         return TableData.count
     }
     
-    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         
     }
     
-    func searchBarTextDidEndEditing(searchBar: UISearchBar) {
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         
     }
     
-    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
                
     }
     
-    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         QueryString = searchBar.text!
         indicator.startAnimating()
         get_data("https://calabaryellowpages.herokuapp.com/api/search?p=1&q=" + searchBar.text!)
         
     }
     
-    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
     }
     
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if(TableData[indexPath.row].Type == "true"){
-            let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! TableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
             let item = TableData[indexPath.row]
             cell.SearchTitle?.text = item.Title
             cell.SearchAddress?.text = item.Address
             cell.SearchSpecialisation?.text = item.Specialisation
             cell.SearchWorkDay?.text = item.WorkDays
             cell.SearchPhone?.text = item.Phone
-            if let url = NSURL(string: item.Image), datas = NSData(contentsOfURL: url){
+            if let url = URL(string: item.Image), let datas = try? Data(contentsOf: url){
                 cell.SearchLogo.image = UIImage(data: datas)
                 
             }
             return cell
         }else{
-            let cell = tableView.dequeueReusableCellWithIdentifier("cell2", forIndexPath: indexPath) as! TableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell2", for: indexPath) as! TableViewCell
             let item = TableData[indexPath.row]
             cell.SearchTitle?.text = item.Title
             cell.SearchAddress?.text = item.Address
@@ -116,10 +116,10 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
         
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let dataToPass = TableData[indexPath.row]
         if(dataToPass.Type == "true"){
-            let categoryList:PlusViewController = self.storyboard?.instantiateViewControllerWithIdentifier("plusDetailView") as! PlusViewController
+            let categoryList:PlusViewController = self.storyboard?.instantiateViewController(withIdentifier: "plusDetailView") as! PlusViewController
             categoryList.Address = dataToPass.Address
             categoryList.titleM = dataToPass.Title
             categoryList.ImageAray = dataToPass.ImageAray
@@ -129,20 +129,20 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
             categoryList.special = dataToPass.Specialisation
             categoryList.web = dataToPass.Web
             categoryList.logo = dataToPass.Image
-            dispatch_async(dispatch_get_main_queue(), {() -> Void in
-                self.presentViewController(categoryList, animated: true, completion: nil)
+            DispatchQueue.main.async(execute: {() -> Void in
+                self.present(categoryList, animated: true, completion: nil)
             })
             
         }
         
     }
     
-    func get_data(url:String)
+    func get_data(_ url:String)
     {
-        let url = NSURL(string: url)
-        let urlRequest = NSMutableURLRequest(URL: url!)
-        urlRequest.HTTPMethod = "POST"
-        let task = NSURLSession.sharedSession().dataTaskWithRequest(urlRequest){
+        let url = URL(string: url)
+        let urlRequest = NSMutableURLRequest(url: url!)
+        urlRequest.httpMethod = "POST"
+        let task = URLSession.shared.dataTask(with: urlRequest, completionHandler: {
             data, response, error in
             if error != nil
             {
@@ -150,7 +150,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
                 return
             }
             do{
-                let jsonResult = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
+                let jsonResult = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
                 if ((jsonResult["Posts"] as? String) != nil) {
                     let data = jsonResult["Posts"] as! NSArray
                     for item in data{
@@ -178,7 +178,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
                         
                     }
                     
-                    dispatch_async(dispatch_get_main_queue(), {() -> Void in
+                    DispatchQueue.main.async(execute: {() -> Void in
                         self.indicator.stopAnimating()
                         self.indicator.hidesWhenStopped = true
                         self.tableView.reloadData()
@@ -191,7 +191,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
             catch{
                 
             }
-        }
+        })
         task.resume()
         
     }

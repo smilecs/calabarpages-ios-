@@ -12,15 +12,15 @@ class TabBar: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let preferences = NSUserDefaults.standardUserDefaults()
+        let preferences = UserDefaults.standard
         
         let loggedIn = "loggedIn"
         
-        if preferences.objectForKey(loggedIn) == nil {
+        if preferences.object(forKey: loggedIn) == nil {
             //  Doesn't exist
-            let logginControl:Login = self.storyboard?.instantiateViewControllerWithIdentifier("login") as! Login
-            dispatch_async(dispatch_get_main_queue(), {() -> Void in
-                self.presentViewController(logginControl, animated: true, completion: nil)
+            let logginControl:Login = self.storyboard?.instantiateViewController(withIdentifier: "login") as! Login
+            DispatchQueue.main.async(execute: {() -> Void in
+                self.present(logginControl, animated: true, completion: nil)
             })
         }
         // Do any additional setup after loading the view.

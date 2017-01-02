@@ -7,6 +7,6 @@ target 'CalabarYellowPages' do
 
 
   # Pods for CalabarYellowPages
-pod 'Firebase/Auth'
+pod 'Firebase/Core'
 
 end

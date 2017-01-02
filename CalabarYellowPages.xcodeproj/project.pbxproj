@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B4C30FC64A9E302D3BB6893 /* Pods_CalabarYellowPages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96D8B296F30C20A0E6BA7669 /* Pods_CalabarYellowPages.framework */; };
 		F602D3BD1DE08CFC00AB0DD6 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F602D3BC1DE08CFC00AB0DD6 /* TableViewCell.swift */; };
 		F602D3BF1DE08D5900AB0DD6 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F602D3BE1DE08D5900AB0DD6 /* DataModel.swift */; };
 		F602D3C31DE08EDA00AB0DD6 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F602D3C21DE08EDA00AB0DD6 /* TableViewController.swift */; };
@@ -19,23 +20,14 @@
 		F677DB881DCF808800DD2A84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F677DB861DCF808800DD2A84 /* LaunchScreen.storyboard */; };
 		F6CBE7571DF9DD77003B5DAC /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CBE7561DF9DD77003B5DAC /* Login.swift */; };
 		F6CBE7591DF9DDED003B5DAC /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CBE7581DF9DDED003B5DAC /* TabBar.swift */; };
-		F6CBE7761DFA02E2003B5DAC /* FirebaseAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CBE7751DFA02E2003B5DAC /* FirebaseAuth.framework */; };
-		F6CBE7781DFA04C0003B5DAC /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CBE7771DFA04C0003B5DAC /* GTMSessionFetcher.framework */; };
 		F6CBE77D1DFA9CAC003B5DAC /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CBE7791DFA9CAC003B5DAC /* Bolts.framework */; };
 		F6CBE77E1DFA9CAC003B5DAC /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CBE77A1DFA9CAC003B5DAC /* FBSDKCoreKit.framework */; };
 		F6CBE77F1DFA9CAC003B5DAC /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CBE77B1DFA9CAC003B5DAC /* FBSDKLoginKit.framework */; };
 		F6CBE7801DFA9CAC003B5DAC /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CBE77C1DFA9CAC003B5DAC /* FBSDKShareKit.framework */; };
-		F6CBE7821DFADED1003B5DAC /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CBE7811DFADED1003B5DAC /* GoogleMobileAds.framework */; };
 		F6CBE7841DFAEC40003B5DAC /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CBE7831DFAEC40003B5DAC /* CollectionViewCell.swift */; };
 		F6D2658F1DE36A360032DC64 /* CategoryListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2658E1DE36A360032DC64 /* CategoryListViewCell.swift */; };
 		F6D265911DE36BCC0032DC64 /* CategoryListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D265901DE36BCC0032DC64 /* CategoryListController.swift */; };
 		F6DE6E261DF4CC7A002D20D2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F6DE6E251DF4CC7A002D20D2 /* GoogleService-Info.plist */; };
-		F6DE6E481DF4D7B6002D20D2 /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6DE6E421DF4D7B6002D20D2 /* FirebaseAnalytics.framework */; };
-		F6DE6E491DF4D7B6002D20D2 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6DE6E431DF4D7B6002D20D2 /* FirebaseCore.framework */; };
-		F6DE6E4A1DF4D7B6002D20D2 /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6DE6E441DF4D7B6002D20D2 /* FirebaseInstanceID.framework */; };
-		F6DE6E4B1DF4D7B6002D20D2 /* GoogleInterchangeUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6DE6E451DF4D7B6002D20D2 /* GoogleInterchangeUtilities.framework */; };
-		F6DE6E4C1DF4D7B6002D20D2 /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6DE6E461DF4D7B6002D20D2 /* GoogleSymbolUtilities.framework */; };
-		F6DE6E4D1DF4D7B6002D20D2 /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6DE6E471DF4D7B6002D20D2 /* GoogleToolboxForMac.framework */; };
 		F6DE6E4F1DF4D85A002D20D2 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F6DE6E4E1DF4D85A002D20D2 /* libicucore.tbd */; };
 		F6DE6E5A1DF4DBAF002D20D2 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F6DE6E591DF4DBAF002D20D2 /* libc++.tbd */; };
 		F6DE6E5C1DF4DBC7002D20D2 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6DE6E5B1DF4DBC6002D20D2 /* CFNetwork.framework */; };
@@ -45,6 +37,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		96D8B296F30C20A0E6BA7669 /* Pods_CalabarYellowPages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalabarYellowPages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A12FDA0AA71DEA8226AE1C9B /* Pods-CalabarYellowPages.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalabarYellowPages.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CalabarYellowPages/Pods-CalabarYellowPages.debug.xcconfig"; sourceTree = "<group>"; };
+		A19091C9D045D5CB05C1F5E7 /* Pods-CalabarYellowPages.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalabarYellowPages.release.xcconfig"; path = "Pods/Target Support Files/Pods-CalabarYellowPages/Pods-CalabarYellowPages.release.xcconfig"; sourceTree = "<group>"; };
 		F602D3BC1DE08CFC00AB0DD6 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		F602D3BE1DE08D5900AB0DD6 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		F602D3C21DE08EDA00AB0DD6 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -59,26 +54,15 @@
 		F677DB891DCF808800DD2A84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6CBE7561DF9DD77003B5DAC /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		F6CBE7581DF9DDED003B5DAC /* TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
-		F6CBE7751DFA02E2003B5DAC /* FirebaseAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseAuth.framework; sourceTree = "<group>"; };
-		F6CBE7771DFA04C0003B5DAC /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GTMSessionFetcher.framework; sourceTree = "<group>"; };
 		F6CBE7791DFA9CAC003B5DAC /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		F6CBE77A1DFA9CAC003B5DAC /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		F6CBE77B1DFA9CAC003B5DAC /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		F6CBE77C1DFA9CAC003B5DAC /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
-		F6CBE7811DFADED1003B5DAC /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		F6CBE7831DFAEC40003B5DAC /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionViewCell.swift; path = ../CollectionViewCell.swift; sourceTree = "<group>"; };
 		F6D2658E1DE36A360032DC64 /* CategoryListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryListViewCell.swift; sourceTree = "<group>"; };
 		F6D265901DE36BCC0032DC64 /* CategoryListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryListController.swift; sourceTree = "<group>"; };
 		F6DE6E251DF4CC7A002D20D2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		F6DE6E421DF4D7B6002D20D2 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseAnalytics.framework; sourceTree = "<group>"; };
-		F6DE6E431DF4D7B6002D20D2 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = "<group>"; };
-		F6DE6E441DF4D7B6002D20D2 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseInstanceID.framework; sourceTree = "<group>"; };
-		F6DE6E451DF4D7B6002D20D2 /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
-		F6DE6E461DF4D7B6002D20D2 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
-		F6DE6E471DF4D7B6002D20D2 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleToolboxForMac.framework; sourceTree = "<group>"; };
 		F6DE6E4E1DF4D85A002D20D2 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
-		F6DE6E501DF4D895002D20D2 /* Firebase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = ../../Downloads/Firebase/Firebase.h; sourceTree = "<group>"; };
-		F6DE6E511DF4D895002D20D2 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = ../../Downloads/Firebase/module.modulemap; sourceTree = "<group>"; };
 		F6DE6E561DF4DA74002D20D2 /* CalabarYellowPages-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CalabarYellowPages-Bridging-Header.h"; sourceTree = "<group>"; };
 		F6DE6E591DF4DBAF002D20D2 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		F6DE6E5B1DF4DBC6002D20D2 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -92,43 +76,52 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6CBE7821DFADED1003B5DAC /* GoogleMobileAds.framework in Frameworks */,
 				F6DE6E601DF4DBEB002D20D2 /* SystemConfiguration.framework in Frameworks */,
 				F6DE6E5E1DF4DBD4002D20D2 /* Security.framework in Frameworks */,
 				F6CBE7801DFA9CAC003B5DAC /* FBSDKShareKit.framework in Frameworks */,
 				F6DE6E5C1DF4DBC7002D20D2 /* CFNetwork.framework in Frameworks */,
-				F6CBE7781DFA04C0003B5DAC /* GTMSessionFetcher.framework in Frameworks */,
 				F6DE6E5A1DF4DBAF002D20D2 /* libc++.tbd in Frameworks */,
 				F6DE6E4F1DF4D85A002D20D2 /* libicucore.tbd in Frameworks */,
-				F6DE6E491DF4D7B6002D20D2 /* FirebaseCore.framework in Frameworks */,
-				F6DE6E4B1DF4D7B6002D20D2 /* GoogleInterchangeUtilities.framework in Frameworks */,
-				F6DE6E4C1DF4D7B6002D20D2 /* GoogleSymbolUtilities.framework in Frameworks */,
-				F6DE6E4D1DF4D7B6002D20D2 /* GoogleToolboxForMac.framework in Frameworks */,
 				F6CBE77E1DFA9CAC003B5DAC /* FBSDKCoreKit.framework in Frameworks */,
-				F6CBE7761DFA02E2003B5DAC /* FirebaseAuth.framework in Frameworks */,
-				F6DE6E4A1DF4D7B6002D20D2 /* FirebaseInstanceID.framework in Frameworks */,
-				F6DE6E481DF4D7B6002D20D2 /* FirebaseAnalytics.framework in Frameworks */,
 				F6CBE77F1DFA9CAC003B5DAC /* FBSDKLoginKit.framework in Frameworks */,
 				F6CBE77D1DFA9CAC003B5DAC /* Bolts.framework in Frameworks */,
+				1B4C30FC64A9E302D3BB6893 /* Pods_CalabarYellowPages.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		446371CE5E97D9B8B54C0CFA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A12FDA0AA71DEA8226AE1C9B /* Pods-CalabarYellowPages.debug.xcconfig */,
+				A19091C9D045D5CB05C1F5E7 /* Pods-CalabarYellowPages.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6019458800D4DCA9D8B7276F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				96D8B296F30C20A0E6BA7669 /* Pods_CalabarYellowPages.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F677DB6F1DCF808800DD2A84 = {
 			isa = PBXGroup;
 			children = (
-				F6DBE5CF1E0331B500A54EA9 /* firebase */,
 				F6DBE5D01E0331CB00A54EA9 /* facebook */,
 				F6DE6E5F1DF4DBEB002D20D2 /* SystemConfiguration.framework */,
 				F6DE6E5D1DF4DBD4002D20D2 /* Security.framework */,
 				F6DE6E5B1DF4DBC6002D20D2 /* CFNetwork.framework */,
 				F6DE6E591DF4DBAF002D20D2 /* libc++.tbd */,
-				F6DE6E511DF4D895002D20D2 /* module.modulemap */,
 				F6DE6E4E1DF4D85A002D20D2 /* libicucore.tbd */,
 				F677DB7A1DCF808800DD2A84 /* CalabarYellowPages */,
 				F677DB791DCF808800DD2A84 /* Products */,
+				446371CE5E97D9B8B54C0CFA /* Pods */,
+				6019458800D4DCA9D8B7276F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -166,23 +159,6 @@
 			path = CalabarYellowPages;
 			sourceTree = "<group>";
 		};
-		F6DBE5CF1E0331B500A54EA9 /* firebase */ = {
-			isa = PBXGroup;
-			children = (
-				F6DE6E501DF4D895002D20D2 /* Firebase.h */,
-				F6DE6E421DF4D7B6002D20D2 /* FirebaseAnalytics.framework */,
-				F6CBE7811DFADED1003B5DAC /* GoogleMobileAds.framework */,
-				F6CBE7771DFA04C0003B5DAC /* GTMSessionFetcher.framework */,
-				F6CBE7751DFA02E2003B5DAC /* FirebaseAuth.framework */,
-				F6DE6E431DF4D7B6002D20D2 /* FirebaseCore.framework */,
-				F6DE6E441DF4D7B6002D20D2 /* FirebaseInstanceID.framework */,
-				F6DE6E451DF4D7B6002D20D2 /* GoogleInterchangeUtilities.framework */,
-				F6DE6E461DF4D7B6002D20D2 /* GoogleSymbolUtilities.framework */,
-				F6DE6E471DF4D7B6002D20D2 /* GoogleToolboxForMac.framework */,
-			);
-			name = firebase;
-			sourceTree = "<group>";
-		};
 		F6DBE5D01E0331CB00A54EA9 /* facebook */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,9 +177,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F677DB8C1DCF808800DD2A84 /* Build configuration list for PBXNativeTarget "CalabarYellowPages" */;
 			buildPhases = (
+				DE37D7101728EDF911C49245 /* [CP] Check Pods Manifest.lock */,
 				F677DB741DCF808800DD2A84 /* Sources */,
 				F677DB751DCF808800DD2A84 /* Frameworks */,
 				F677DB761DCF808800DD2A84 /* Resources */,
+				21D338FD631381E1B471EFE7 /* [CP] Embed Pods Frameworks */,
+				2640EBA100480C8A64C8921E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -221,12 +200,14 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = calabarpages;
 				TargetAttributes = {
 					F677DB771DCF808800DD2A84 = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = 2CVRQ34ZA9;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -261,6 +242,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		21D338FD631381E1B471EFE7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CalabarYellowPages/Pods-CalabarYellowPages-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2640EBA100480C8A64C8921E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CalabarYellowPages/Pods-CalabarYellowPages-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE37D7101728EDF911C49245 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F677DB741DCF808800DD2A84 /* Sources */ = {
@@ -318,8 +347,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -363,8 +394,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -383,6 +416,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -390,11 +424,14 @@
 		};
 		F677DB8D1DCF808800DD2A84 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A12FDA0AA71DEA8226AE1C9B /* Pods-CalabarYellowPages.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -407,19 +444,24 @@
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.calabarpages.CalabarYellowPages;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3a90cada-3f50-483b-a0cd-8253ecd9ff21";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "CalabarYellowPages/CalabarYellowPages-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		F677DB8E1DCF808800DD2A84 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A19091C9D045D5CB05C1F5E7 /* Pods-CalabarYellowPages.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: calabar pages (2CVRQ34ZA9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -432,8 +474,10 @@
 				"OTHER_LDFLAGS[sdk=iphoneos*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.calabarpages.CalabarYellowPages;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3a90cada-3f50-483b-a0cd-8253ecd9ff21";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "CalabarYellowPages/CalabarYellowPages-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

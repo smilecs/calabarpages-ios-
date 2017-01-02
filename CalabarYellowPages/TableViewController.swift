@@ -24,16 +24,16 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         get_data("https://calabaryellowpages.herokuapp.com/api/getcat")
         admob.adUnitID = "ca-app-pub-9472469694308804/9770170177"
         admob.rootViewController = self
-        admob.loadRequest(GADRequest())
+        admob.load(GADRequest())
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.searchBar.delegate = self
-        indicator = UIActivityIndicatorView(frame: CGRectMake(0, 0, 40, 40))
-        indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+        indicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
         indicator.center = self.view.center
         self.view.addSubview(indicator)
         indicator.startAnimating()
-        indicator.backgroundColor = UIColor.whiteColor()
+        indicator.backgroundColor = UIColor.white
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -47,46 +47,46 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         // Dispose of any resources that can be recreated.
     }
     
-    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         
     }
     
-    func searchBarTextDidEndEditing(searchBar: UISearchBar) {
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         
     }
     
-    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         
         
     }
     
-    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-        let categoryList:SearchViewController = self.storyboard?.instantiateViewControllerWithIdentifier("searchResult") as! SearchViewController
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let categoryList:SearchViewController = self.storyboard?.instantiateViewController(withIdentifier: "searchResult") as! SearchViewController
         categoryList.QueryString = searchBar.text!
-        dispatch_async(dispatch_get_main_queue(), {() -> Void in
-            self.presentViewController(categoryList, animated: true, completion: nil)
+        DispatchQueue.main.async(execute: {() -> Void in
+            self.present(categoryList, animated: true, completion: nil)
         })
         
     }
     
-    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
     }
 
     // MARK: - Table view data source
 
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return TableData.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! TableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
             let item = self.TableData[indexPath.row]
             cell.label?.text = item.Title
             return cell
@@ -94,24 +94,24 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let dataToPass = TableData[indexPath.row]
-        let categoryList:CategoryListController = self.storyboard?.instantiateViewControllerWithIdentifier("CategoryList") as! CategoryListController
+        let categoryList:CategoryListController = self.storyboard?.instantiateViewController(withIdentifier: "CategoryList") as! CategoryListController
             categoryList.slug = dataToPass.Slug
             categoryList.categoryName = dataToPass.Title
-        dispatch_async(dispatch_get_main_queue(), {() -> Void in
-                       self.presentViewController(categoryList, animated: true, completion: nil)
+        DispatchQueue.main.async(execute: {() -> Void in
+                       self.present(categoryList, animated: true, completion: nil)
             })
      
         
     }
     
-    func get_data(url:String)
+    func get_data(_ url:String)
     {
-        let url = NSURL(string: url)
-        let urlRequest = NSMutableURLRequest(URL: url!)
-        urlRequest.HTTPMethod = "GET"
-        let task = NSURLSession.sharedSession().dataTaskWithRequest(urlRequest){
+        let url = URL(string: url)
+        let urlRequest = NSMutableURLRequest(url: url!)
+        urlRequest.httpMethod = "GET"
+        let task = URLSession.shared.dataTask(with: urlRequest, completionHandler: {
             data, response, error in
             if error != nil
             {
@@ -119,7 +119,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
                 return
             }
             do{
-                let jsonResult = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSArray
+                let jsonResult = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSArray
                 for item in jsonResult{
                     let tm = item as! NSDictionary
                     let dataModel:DataModel = DataModel()
@@ -131,7 +131,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
                     self.TableData.append(dataModel)
                 
                 }
-                dispatch_async(dispatch_get_main_queue(), {() -> Void in
+                DispatchQueue.main.async(execute: {() -> Void in
                     self.indicator.stopAnimating()
                     self.indicator.hidesWhenStopped = true
                     self.tableView.reloadData()
@@ -141,7 +141,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
             catch{
                 
             }
-        }
+        })
         task.resume()
         
     }
