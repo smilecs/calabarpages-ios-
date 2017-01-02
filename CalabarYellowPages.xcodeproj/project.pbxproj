@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B4C30FC64A9E302D3BB6893 /* Pods_CalabarYellowPages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96D8B296F30C20A0E6BA7669 /* Pods_CalabarYellowPages.framework */; };
 		F602D3BD1DE08CFC00AB0DD6 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F602D3BC1DE08CFC00AB0DD6 /* TableViewCell.swift */; };
 		F602D3BF1DE08D5900AB0DD6 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F602D3BE1DE08D5900AB0DD6 /* DataModel.swift */; };
 		F602D3C31DE08EDA00AB0DD6 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F602D3C21DE08EDA00AB0DD6 /* TableViewController.swift */; };
@@ -28,8 +27,6 @@
 		F6D2658F1DE36A360032DC64 /* CategoryListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2658E1DE36A360032DC64 /* CategoryListViewCell.swift */; };
 		F6D265911DE36BCC0032DC64 /* CategoryListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D265901DE36BCC0032DC64 /* CategoryListController.swift */; };
 		F6DE6E261DF4CC7A002D20D2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F6DE6E251DF4CC7A002D20D2 /* GoogleService-Info.plist */; };
-		F6DE6E4F1DF4D85A002D20D2 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F6DE6E4E1DF4D85A002D20D2 /* libicucore.tbd */; };
-		F6DE6E5A1DF4DBAF002D20D2 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F6DE6E591DF4DBAF002D20D2 /* libc++.tbd */; };
 		F6DE6E5C1DF4DBC7002D20D2 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6DE6E5B1DF4DBC6002D20D2 /* CFNetwork.framework */; };
 		F6DE6E5E1DF4DBD4002D20D2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6DE6E5D1DF4DBD4002D20D2 /* Security.framework */; };
 		F6DE6E601DF4DBEB002D20D2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6DE6E5F1DF4DBEB002D20D2 /* SystemConfiguration.framework */; };
@@ -80,12 +77,9 @@
 				F6DE6E5E1DF4DBD4002D20D2 /* Security.framework in Frameworks */,
 				F6CBE7801DFA9CAC003B5DAC /* FBSDKShareKit.framework in Frameworks */,
 				F6DE6E5C1DF4DBC7002D20D2 /* CFNetwork.framework in Frameworks */,
-				F6DE6E5A1DF4DBAF002D20D2 /* libc++.tbd in Frameworks */,
-				F6DE6E4F1DF4D85A002D20D2 /* libicucore.tbd in Frameworks */,
 				F6CBE77E1DFA9CAC003B5DAC /* FBSDKCoreKit.framework in Frameworks */,
 				F6CBE77F1DFA9CAC003B5DAC /* FBSDKLoginKit.framework in Frameworks */,
 				F6CBE77D1DFA9CAC003B5DAC /* Bolts.framework in Frameworks */,
-				1B4C30FC64A9E302D3BB6893 /* Pods_CalabarYellowPages.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
