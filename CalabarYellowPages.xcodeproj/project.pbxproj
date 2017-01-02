@@ -373,7 +373,6 @@
 		};
 		F677DB8D1DCF808800DD2A84 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A12FDA0AA71DEA8226AE1C9B /* Pods-CalabarYellowPages.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -405,7 +404,6 @@
 		};
 		F677DB8E1DCF808800DD2A84 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A19091C9D045D5CB05C1F5E7 /* Pods-CalabarYellowPages.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
