@@ -35,6 +35,7 @@
 		F602D3C21DE08EDA00AB0DD6 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		F602D3C41DE0C2AA00AB0DD6 /* PlusViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlusViewCell.swift; sourceTree = "<group>"; };
 		F602D3C61DE0C38E00AB0DD6 /* PlusTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlusTableViewController.swift; sourceTree = "<group>"; };
+		F605ACF11E217D8A0099373C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		F6067BE21E1B0925009F349E /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		F6067BE31E1B0925009F349E /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		F6067BE41E1B0925009F349E /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
@@ -80,6 +81,7 @@
 		6019458800D4DCA9D8B7276F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F605ACF11E217D8A0099373C /* CoreData.framework */,
 				F6067BE21E1B0925009F349E /* Bolts.framework */,
 				F6067BE31E1B0925009F349E /* FBSDKCoreKit.framework */,
 				F6067BE41E1B0925009F349E /* FBSDKLoginKit.framework */,
@@ -414,7 +416,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A12FDA0AA71DEA8226AE1C9B /* Pods-CalabarYellowPages.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CLANG_ENABLE_MODULES = YES;
@@ -427,7 +429,6 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/CalabarYellowPages",
 				);
-				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = /Users/SMILECS/Documents/FacebookSDK;
 				INFOPLIST_FILE = CalabarYellowPages/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -443,6 +444,7 @@
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				"USER_HEADER_SEARCH_PATHS[arch=*]" = "$(inherited)";
+				VALID_ARCHS = "arm64 armv7";
 			};
 			name = Debug;
 		};
@@ -450,7 +452,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A19091C9D045D5CB05C1F5E7 /* Pods-CalabarYellowPages.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CLANG_ENABLE_MODULES = YES;
@@ -463,7 +465,6 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/CalabarYellowPages",
 				);
-				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = /Users/SMILECS/Documents/FacebookSDK;
 				INFOPLIST_FILE = CalabarYellowPages/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -478,6 +479,7 @@
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				"USER_HEADER_SEARCH_PATHS[arch=*]" = "$(inherited)";
+				VALID_ARCHS = "arm64 armv7";
 			};
 			name = Release;
 		};
