@@ -19,7 +19,7 @@ class PlusTableViewController: UIViewController, UITableViewDelegate, UITableVie
         self.table.delegate = self
         self.table.dataSource = self
         self.searchbar.delegate = self
-        get_data("https://calabaryellowpages.herokuapp.com/api/falseview?page=1")
+        get_data(DataModel.Url+"api/falseview?page=1")
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -50,7 +50,7 @@ class PlusTableViewController: UIViewController, UITableViewDelegate, UITableVie
         if indexPath.row == lastElement {
             page += 1
             let string = String(page)
-            get_data("https://calabaryellowpages.herokuapp.com/api/pluslistings?p="+string)
+            get_data(DataModel.Url+"api/pluslistings?p="+string)
         }
     }
     

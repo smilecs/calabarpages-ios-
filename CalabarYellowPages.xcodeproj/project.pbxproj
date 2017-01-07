@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A8865BCDC1A81DC7936F3FF9 /* Pods_CalabarYellowPages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96D8B296F30C20A0E6BA7669 /* Pods_CalabarYellowPages.framework */; };
 		F602D3BD1DE08CFC00AB0DD6 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F602D3BC1DE08CFC00AB0DD6 /* TableViewCell.swift */; };
 		F602D3BF1DE08D5900AB0DD6 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F602D3BE1DE08D5900AB0DD6 /* DataModel.swift */; };
 		F602D3C31DE08EDA00AB0DD6 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F602D3C21DE08EDA00AB0DD6 /* TableViewController.swift */; };
@@ -36,7 +35,12 @@
 		F602D3C21DE08EDA00AB0DD6 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		F602D3C41DE0C2AA00AB0DD6 /* PlusViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlusViewCell.swift; sourceTree = "<group>"; };
 		F602D3C61DE0C38E00AB0DD6 /* PlusTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlusTableViewController.swift; sourceTree = "<group>"; };
+		F6067BE21E1B0925009F349E /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		F6067BE31E1B0925009F349E /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		F6067BE41E1B0925009F349E /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		F6067BE51E1B0925009F349E /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		F64228F31DEECBB000AA870A /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		F676022B1E1EF557001228B5 /* CalabarYellowPages.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CalabarYellowPages.entitlements; sourceTree = "<group>"; };
 		F677DB781DCF808800DD2A84 /* CalabarYellowPages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalabarYellowPages.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F677DB7B1DCF808800DD2A84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F677DB821DCF808800DD2A84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -58,7 +62,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8865BCDC1A81DC7936F3FF9 /* Pods_CalabarYellowPages.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +80,10 @@
 		6019458800D4DCA9D8B7276F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F6067BE21E1B0925009F349E /* Bolts.framework */,
+				F6067BE31E1B0925009F349E /* FBSDKCoreKit.framework */,
+				F6067BE41E1B0925009F349E /* FBSDKLoginKit.framework */,
+				F6067BE51E1B0925009F349E /* FBSDKShareKit.framework */,
 				96D8B296F30C20A0E6BA7669 /* Pods_CalabarYellowPages.framework */,
 			);
 			name = Frameworks;
@@ -104,6 +111,7 @@
 		F677DB7A1DCF808800DD2A84 /* CalabarYellowPages */ = {
 			isa = PBXGroup;
 			children = (
+				F676022B1E1EF557001228B5 /* CalabarYellowPages.entitlements */,
 				F6CBE7831DFAEC40003B5DAC /* CollectionViewCell.swift */,
 				F6DE6E251DF4CC7A002D20D2 /* GoogleService-Info.plist */,
 				F677DB7B1DCF808800DD2A84 /* AppDelegate.swift */,
@@ -171,7 +179,18 @@
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = 2CVRQ34ZA9;
 						LastSwiftMigration = 0820;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 0;
+							};
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+							com.apple.SafariKeychain = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -317,10 +336,10 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mmumene Enyieko Egbai (P7L88RL69U)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -338,6 +357,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MACH_O_TYPE = mh_execute;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -365,10 +385,10 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: calabar pages (2CVRQ34ZA9)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -380,7 +400,9 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MACH_O_TYPE = mh_execute;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -396,9 +418,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mmumene Enyieko Egbai (P7L88RL69U)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mmumene Enyieko Egbai (P7L88RL69U)";
+				DEVELOPMENT_TEAM = 2CVRQ34ZA9;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -407,15 +429,19 @@
 				);
 				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = /Users/SMILECS/Documents/FacebookSDK;
 				INFOPLIST_FILE = CalabarYellowPages/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MACH_O_TYPE = mh_execute;
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.calabarpages.CalabarYellowPages;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "8800a6e5-dfc8-46a2-a453-5ae490f5d66c";
+				PROVISIONING_PROFILE_SPECIFIER = development;
+				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "CalabarYellowPages/CalabarYellowPages-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				"USER_HEADER_SEARCH_PATHS[arch=*]" = "$(inherited)";
 			};
 			name = Debug;
@@ -429,8 +455,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: calabar pages (2CVRQ34ZA9)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: calabar pages (2CVRQ34ZA9)";
+				DEVELOPMENT_TEAM = 2CVRQ34ZA9;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -439,14 +465,18 @@
 				);
 				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = /Users/SMILECS/Documents/FacebookSDK;
 				INFOPLIST_FILE = CalabarYellowPages/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MACH_O_TYPE = mh_execute;
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.calabarpages.CalabarYellowPages;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "3a90cada-3f50-483b-a0cd-8253ecd9ff21";
+				PROVISIONING_PROFILE_SPECIFIER = "CalabarYellowPages AppStore";
+				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "CalabarYellowPages/CalabarYellowPages-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				"USER_HEADER_SEARCH_PATHS[arch=*]" = "$(inherited)";
 			};
 			name = Release;

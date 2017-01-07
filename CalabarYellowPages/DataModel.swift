@@ -19,7 +19,7 @@ class DataModel{
     var Web:String
     var Image, Specialisation:String
     var Description:String
-    static let Url:String = "https://calabaryellowpages.herokuapp.com/"
+    static let Url:String = "http://calabarpagescom/"
     init(){
         self.Web = ""
         self.ImageAray = []

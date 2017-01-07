@@ -13,14 +13,14 @@ import UIKit
 class TableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     var TableData:Array<DataModel> = Array<DataModel>()
 
-       @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     var indicator = UIActivityIndicatorView()
     var Searchfilter:Array<DataModel> = Array<DataModel>()
         override func viewDidLoad() {
         super.viewDidLoad()
         
-        get_data("https://calabaryellowpages.herokuapp.com/api/getcat")
+        get_data(DataModel.Url+"api/getcat")
         //admob.adUnitID = "ca-app-pub-9472469694308804/9770170177"
         //admob.rootViewController = self
       //  admob.load(GADRequest())

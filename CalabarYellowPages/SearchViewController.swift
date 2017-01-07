@@ -28,7 +28,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
         self.searchBar.delegate = self
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        get_data("https://calabaryellowpages.herokuapp.com/api/result?page=1&q=" + QueryString)
+        get_data(DataModel.Url+"api/result?page=1&q=" + QueryString)
         indicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
         indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
         indicator.center = self.view.center
@@ -50,7 +50,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
         if indexPath.row == lastElement {
             page += 1
             let string = String(page)
-            get_data("https://calabaryellowpages.herokuapp.com/api/search?p="+string+"&q=" + QueryString)
+            get_data(DataModel.Url+"api/search?p="+string+"&q=" + QueryString)
         }
     }
     
@@ -80,7 +80,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         QueryString = searchBar.text!
         indicator.startAnimating()
-        get_data("https://calabaryellowpages.herokuapp.com/api/search?p=1&q=" + searchBar.text!)
+        get_data(DataModel.Url+"api/search?p=1&q=" + searchBar.text!)
         
     }
     

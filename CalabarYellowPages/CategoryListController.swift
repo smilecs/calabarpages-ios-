@@ -122,7 +122,7 @@ class CategoryListController: UIViewController, UITableViewDelegate, UITableView
         if indexPath.row == lastElement {
             page += 1
             let string = String(page)
-            get_data("https://calabaryellowpages.herokuapp.com/api/categories/"+slug+"?p="+string)
+            get_data(DataModel.Url+"api/categories/"+slug+"?p="+string)
         }
     }
     

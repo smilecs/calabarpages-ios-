@@ -8,9 +8,9 @@
 
 import UIKit
 
-class Login: UIViewController, FBSDKLoginButtonDelegate{
+class Login: UIViewController {
 
-    @IBAction func skip(_ sender: UIButton) {
+   /* @IBAction func skip(_ sender: UIButton) {
         let preferences = UserDefaults.standard
         
         let currentLevelKey = "loggedIn"
@@ -26,10 +26,10 @@ class Login: UIViewController, FBSDKLoginButtonDelegate{
         DispatchQueue.main.async(execute: {() -> Void in
             self.present(logginControl, animated: true, completion: nil)
         })
-    }
+    }*/
     override func viewDidLoad() {
         super.viewDidLoad()
-        if (FBSDKAccessToken.current() == nil)
+     /*   if (FBSDKAccessToken.current() == nil)
         {
             let loginView : FBSDKLoginButton = FBSDKLoginButton()
             self.view.addSubview(loginView)
@@ -44,7 +44,7 @@ class Login: UIViewController, FBSDKLoginButtonDelegate{
             loginView.readPermissions = ["public_profile", "email", "user_friends"]
             loginView.delegate = self
 
-        }
+        }*/
 
         // Do any additional setup after loading the view.
     }
@@ -54,7 +54,7 @@ class Login: UIViewController, FBSDKLoginButtonDelegate{
         // Dispose of any resources that can be recreated.
     }
     
-    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+  /*  func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
         print("User Logged In")
         
         if ((error) != nil)
@@ -72,9 +72,9 @@ class Login: UIViewController, FBSDKLoginButtonDelegate{
                self.returnUserData()
             }
         }
-    }
+    }*/
     
-    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+   /* func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
         print("User Logged Out")
     }
     
@@ -152,7 +152,7 @@ class Login: UIViewController, FBSDKLoginButtonDelegate{
                 
             }
         })
-    }
+    }*/
     
 
     /*
