@@ -65,6 +65,9 @@
                                 <state key="normal" title="Skip">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="skip:forEvent:" destination="hFU-Se-WOG" eventType="touchDown" id="AlX-Oe-Pbt"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -390,7 +393,7 @@
                                         <rect key="frame" x="0.0" y="530" width="383" height="251"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GM1-iM-mGP" id="3si-f0-4Ig">
-                                            <rect key="frame" x="0.0" y="0.0" width="383" height="250"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="251"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k1u-w7-6Hb">

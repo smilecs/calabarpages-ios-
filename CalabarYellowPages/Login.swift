@@ -7,10 +7,29 @@
 //
 
 import UIKit
+import FBSDKLoginKit
+import FBSDKCoreKit
 
-class Login: UIViewController {
+class Login: UIViewController, FBSDKLoginButtonDelegate{
 
-   /* @IBAction func skip(_ sender: UIButton) {
+    @IBAction func skip(_ sender: Any, forEvent event: UIEvent) {
+        let preferences = UserDefaults.standard
+        
+        let currentLevelKey = "loggedIn"
+        
+        let currentLevel = 1
+        preferences.set(currentLevel, forKey: currentLevelKey)
+        
+        //  Save to disk
+        preferences.synchronize()
+        
+        
+        let logginControl:TabBar =  self.storyboard?.instantiateViewController(withIdentifier: "main") as! TabBar
+        DispatchQueue.main.async(execute: {() -> Void in
+            self.present(logginControl, animated: true, completion: nil)
+        })
+    }
+   @IBAction func skip(_ sender: UIButton) {
         let preferences = UserDefaults.standard
         
         let currentLevelKey = "loggedIn"
@@ -26,10 +45,10 @@ class Login: UIViewController {
         DispatchQueue.main.async(execute: {() -> Void in
             self.present(logginControl, animated: true, completion: nil)
         })
-    }*/
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-     /*   if (FBSDKAccessToken.current() == nil)
+       if(FBSDKAccessToken.current() == nil)
         {
             let loginView : FBSDKLoginButton = FBSDKLoginButton()
             self.view.addSubview(loginView)
@@ -44,7 +63,7 @@ class Login: UIViewController {
             loginView.readPermissions = ["public_profile", "email", "user_friends"]
             loginView.delegate = self
 
-        }*/
+        }
 
         // Do any additional setup after loading the view.
     }
@@ -54,7 +73,7 @@ class Login: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-  /*  func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+   func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
         print("User Logged In")
         
         if ((error) != nil)
@@ -72,9 +91,9 @@ class Login: UIViewController {
                self.returnUserData()
             }
         }
-    }*/
+    }
     
-   /* func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+   func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
         print("User Logged Out")
     }
     
@@ -152,7 +171,7 @@ class Login: UIViewController {
                 
             }
         })
-    }*/
+    }
     
 
     /*

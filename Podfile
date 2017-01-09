@@ -6,6 +6,9 @@ target 'CalabarYellowPages' do
   use_frameworks!
 
   # Pods for CalabarYellowPages
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKLoginKit'
+  pod 'FBSDKShareKit'
   
 
 end

@@ -28,7 +28,7 @@ class CategoryListController: UIViewController, UITableViewDelegate, UITableView
         indicator.startAnimating()
         indicator.backgroundColor = UIColor.white
         //api/newview?page=" + page + "&q=
-        get_data("https://calabaryellowpages.herokuapp.com/api/categories/"+slug+"?p=1")
+        get_data(DataModel.Url+"api/categories/"+slug+"?p=1")
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -168,7 +168,7 @@ class CategoryListController: UIViewController, UITableViewDelegate, UITableView
                     dataModel.Phone = tm["Hotline"] as! String
                     dataModel.Address = tm["Address"] as! String
                     dataModel.Specialisation = tm["Specialisation"] as! String
-                    dataModel.WorkDays = tm["Dhr"] as! String
+                    dataModel.WorkDays = tm["DHr"] as! String
                     dataModel.Type = tm["Plus"] as! String
                     dataModel.Image = tm["Image"] as! String
                     dataModel.Web = tm["Website"] as! String
